@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>testing design</title>
+	<link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+    <script type="text/javascript" src='js/jquery.min.js'></script>
+  <script  type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+	  <div class="row justify-content-md-center">	    
+	    <div class="col-md-auto">
+	      <h2 id='title'><b>How to Calculate the Lifetime Profit Value <br> Of Your Delighted Client or Raving Fan</b></h2>
+	    </div>	    
+	  </div>
+
+	  <div class="row justify-content-md-center">	    
+	    <div class="col-md-auto">
+	      <h5>Enter the Figures in the Boxes and Click the <b>Calculate</b> Button</h5>
+	    </div>	    
+	  </div>
+
+	  <div class="row justify-content-md-center">	    
+	    <div class="col-6">
+	      <!-- <h5><b>A. </b>The average price of the properties you sell or buy: </h5> -->
+	    </div>
+	    <div class="col-2 new">
+	      <!-- <input type="text" id='curA' class='border border-danger form-control' value=''> -->
+	      <b>Current</b>
+	    </div>
+	    <div class="col-2 new">
+	      <!-- <input type="text" id='newA' class='new border border-danger form-control' value=''> -->
+	      <b>New</b>
+	    </div>
+	    <div class="col-2 new">
+	      <!-- <input type="text" id='difA' class='readOnly dif form-control' value='' readonly> -->
+	      <b>%Difference</b>
+	    </div>	    
+	  </div>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>A. </b>The average price of the properties you sell or buy: </h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curA' class='border border-danger form-control' value=''>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newA' class='new border border-danger form-control' value=''>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difA' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+		<br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>B. </b>Your average listing commission,net of your brokerage's share</h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curB' class='border border-danger form-control' value=''>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newB' class='new border border-danger form-control' value=''>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difB' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+		<br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>C. </b>The average number of years your clients move </h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curC' class='border border-danger form-control' value=''>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newC' class='new border border-danger form-control' value=''>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difC' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+		<br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>D. </b>Your client's average age</h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curD' class='border border-danger form-control' value=''>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newD' class='new border border-danger form-control' value=''>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difD' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+		<br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>E. </b>Your client's age from 72</h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curE' class='readOnly form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newE' class='new readOnly form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difE' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>F. </b>The Number of times they Move</h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curF' class='border border-danger form-control' value='' >
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newF' class='new border border-danger  form-control' value='' >
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difF' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>G. </b>Your total listing commissions over the life of your clients</h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curG' class='readGrean form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newG' class='new readGrean  form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difG' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>H. </b>The number of  times you represent your clients on the buying side</h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curH' class='border border-danger form-control' value='' >
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newH' class='new border border-danger  form-control' value='' >
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difH' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>I. </b>Your average buy-side commission,net of your brokerage's share</h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curI' class='border border-danger form-control' value='' >
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newI' class='new border border-danger  form-control' value='' >
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difI' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>J. </b>Your total buy-side commissions over the life of your client's</h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curJ' class='readGrean form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newJ' class='new readGrean  form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difJ' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>K. Your total commissions over the life of your clients</b></h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curK' class='readGrean form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newK' class='new readGrean  form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difK' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>L. </b>The number of referrals received from your clients each year</h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curL' class='border border-danger form-control' value='' >
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newL' class='new border border-danger  form-control' value='' >
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difL' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>M. </b> The number of referrals from clients during their lifetime of patronage </h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curM' class='readOnly form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newM' class='new readOnly  form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difM' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>N. </b>The percentage of referrals that become your clients on the listing side</h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curN' class='border border-danger form-control' value='' >
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newN' class='new border border-danger  form-control' value='' >
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difN' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>O. </b>The number of referrals who become your clients on the listing side </h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curO' class='readOnly form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newO' class='new readOnly  form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difO' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>P. </b>Your total listing commissions from the referrals</h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curP' class='readGrean form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newP' class='new readGrean  form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difP' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>Q. </b>The number of referrals that become your clients on the buy side</h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curQ' class='border border-danger form-control' value='' >
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newQ' class='new border border-danger  form-control' value='' >
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difQ' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>R. </b>Your total buy-side commissions from the referrals</h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curR' class='readGrean form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newR' class='new readGrean  form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difR' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>S. </b>Your total commissions from referrals</h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curS' class='readGrean form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newS' class='new readGrean  form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difS' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <h5><b>T. </b>Your total income from your clients and their referrals </h5>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='curT' class='readGrean form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='newT' class='new readGrean  form-control' value='' readonly>
+	    </div>
+	    <div class="col-2">
+	      <input type="text" id='difT' class='readOnly dif form-control' value='' readonly>
+	    </div>	    
+	  </div>
+
+	  <br>
+
+	  <div class="row justify-content-md-center align-items-center">	    
+	    <div class="col-6">
+	      <!-- <h5><b>T. </b>Your total income from your clients and their referrals </h5> -->
+	    </div>
+	    <div class="col-2">
+	      <button id="clearCurrent" class="btn btn-primary btnst" style="display: none">Clear Current</button>
+	    </div>
+	    <div class="col-2">
+	      <button id="clearNew" class="btn btn-primary btnst" style="display: none;">Clear New</button>
+	    </div>
+	    <div class="col-2">
+	      <button id = "compare" class="btn btn-primary btnst" style="display: none;">Compare</button>
+	      <button id = "print" class="btn btn-primary btnst" style="display: none;">Print</button>
+	    </div>	    
+	  </div>
+	</div>
+	<br><br><br>
+
+
+	<!-- javascript code for the calculation -->
+	<script type="text/javascript">
+
+	  $(document).ready(function() {
+
+	    $('#print').on('click',function(){
+	      window.print();
+	    });
+
+	    $('.mxinp').on('click',function(){
+	        $('#curA').focus();
+	    });
+	    $('.readOnly').css('background','lightgray');
+	    $('.readGrean').css('background','lightgreen');
+	    $('.new,.dif').css('display','none');
+
+	    //adding commas and $ sign to currentA
+	    $('#curA').on('keyup',function(e){
+	      $('#curA').removeClass('border border-danger').addClass('border border-primary');
+
+	      $('#clearCurrent').css('display','block');  
+	      addDollarSignFor('curA');
+	      let value = $('#curA').val();
+	      value = value.replace('$ ', '').replace(/,/g, '').replace(/[a-z]/g, '');      
+	      checkValue('#curA',value);  
+	      reCalc();
+	      if(value == ''){
+	        $('#curA').addClass('border border-danger');
+	      }          
+	    });
+
+	    //adding commas and $ sign to newA
+	    $('#newA').on('keyup',function(e){
+	      $('#newA').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearNew').css('display','block');
+	      addDollarSignFor('newA');
+	      let value = $('#newA').val();
+	      value = value.replace('$ ', '').replace(/,/g, '').replace(/[a-z]/g, '');      
+	      checkValue('#newA',value);    
+
+	      // $('#difA').val(`${addCommas(findDiff('#curA','#newA'))} %`);
+	      reCalcNew();
+	      if(value == ''){
+	        $('#newA').addClass('border border-danger');
+	      } 
+	    });
+
+	    //adding commas and $ sign to Current B
+	    $('#curB').keyup(function(){
+	      $('#curB').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearCurrent').css('display','block'); 
+	      addDollarSignFor('curB');
+	      let value = $('#curB').val();
+	      value = value.replace('$ ', '').replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas
+	      checkValue('#curB',value);    
+	      reCalc(); 
+	      if(value == ''){
+	        $('#curB').addClass('border border-danger');
+	      } 
+	    });
+
+	    //adding commas and $ sign to New B
+	    $('#newB').keyup(function(){
+	      $('#newB').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearNew').css('display','block');       
+	      addDollarSignFor('newB');
+	      let value = $('#newB').val();
+	      value = value.replace('$ ', '').replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas
+	      checkValue('#newB',value);     
+	      // $('#difB').val(`${addCommas(findDiff('#curB','#newB'))} %`);
+	      reCalcNew();
+	      if(value == ''){
+	        $('#newB').addClass('border border-danger');
+	      } 
+	    });
+
+	    //adding commas to current C
+	    $('#curC').keyup(function(){
+	      $('#curC').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearCurrent').css('display','block'); 
+	      let value = $('#curC').val();
+	      value = value.replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas
+	      checkValue('#curC',value);  
+	      reCalc(); 
+	      if(value == ''){
+	        $('#curC').addClass('border border-danger');
+	      }   
+	    });
+
+	    //adding commas to new C
+	    $('#newC').keyup(function(){
+	      $('#newC').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearNew').css('display','block');
+	      let value = $('#newC').val();
+	      value = value.replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas
+	      checkValue('#newC',value);  
+	      // $('#difC').val(`${addCommas(findDiff('#curC','#newC'))} %`);
+	      reCalcNew();
+	      if(value == ''){
+	        $('#newC').addClass('border border-danger');
+	      } 
+	    });
+
+	    //adding commas to current D
+	    $('#curD').keyup(function(){
+	      $('#curD').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearCurrent').css('display','block'); 
+	      let value = $('#curD').val();
+	      value = value.replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas
+	      checkValue('#curD',value); 
+	      if(value > 72){
+	        value = 72 ;
+	        $('#curE').val(value);       
+	        $('#curD').val(value);       
+	      }else{
+	        $('#curE').val(72-value);
+	        reCalc();
+	        if(value == ''){
+	        $('#curD').addClass('border border-danger');
+	      } 
+	      }
+	      
+	      
+	    });
+
+	    //adding commas to new D
+	    $('#newD').keyup(function(){
+	      $('#newD').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearNew').css('display','block');
+	      let value = $('#newD').val();
+	      value = value.replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas
+	      checkValue('#newD',value); 
+	      if(value > 72){
+	        value = 72 ;
+	        $('#newE').val(value);       
+	        $('#newD').val(value);        
+	      }else{
+	        $('#newE').val(72-value);
+	        // $('#difD').val(`${addCommas(findDiff('#curD','#newD'))} %`);
+	        // $('#difE').val(`${addCommas(findDiff('#curE','#newE'))} %`);
+	        reCalcNew();
+	        if(value == ''){
+	        $('#newD').addClass('border border-danger');
+	      } 
+	      }  
+	      
+	      
+
+	    });
+	        
+	    $('#curF').keyup(function(){
+	      $('#curF').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearCurrent').css('display','block');
+	      let value = $('#curF').val();
+	      value = value.replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas
+	      checkValue('#curF',value);  
+	      val1 = $('#curB').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '');
+	      val = value * val1;
+	      $('#curG').val(`$ ${addCommas(val)}`);
+	      reCalc();
+	      if(value == ''){
+	        $('#curF').addClass('border border-danger');
+	      } 
+	    });
+
+	    $('#newF').keyup(function(){
+	      $('#newF').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearNew').css('display','block');
+	      let value = $('#newF').val();
+	      value = value.replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas
+	      checkValue('#newF',value);  
+	      val1 = $('#curB').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '');
+	      val = value * val1;
+	      $('#newG').val(`$ ${addCommas(val)}`);
+	      // $('#difF').val(`${addCommas(findDiff('#curF','#newF'))} %`);
+	      // $('#difG').val(`${addCommas(findDiff('#curG','#newG'))} %`);
+	      reCalcNew();
+	      if(value == ''){
+	        $('#newF').addClass('border border-danger');
+	      } 
+
+	    });
+
+	    $('#curH').keyup(function(){
+	      $('#curH').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearCurrent').css('display','block');
+	      let value = $('#curH').val();
+	      value = value.replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas
+	      checkValue('#curH',value);  
+	      reCalc();
+	      if(value == ''){
+	        $('#curH').addClass('border border-danger');
+	      } 
+	    });
+
+	    $('#newH').keyup(function(){
+	      $('#newH').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearNew').css('display','block');
+	      let value = $('#newH').val();
+	      value = value.replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas
+	      checkValue('#newH',value);
+	      // $('#difH').val(`${addCommas(findDiff('#curH','#newH'))} %`);
+	      reCalcNew();
+	      if(value == ''){
+	        $('#newH').addClass('border border-danger');
+	      } 
+	    });
+
+	    //adding commas to current L
+	    $('#curL').keyup(function(){
+	      $('#curL').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearCurrent').css('display','block'); 
+	      let value = $('#curL').val();
+	      value = value.replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas
+	      checkValue('#curL',value); 
+	      let valE = $('#curE').val().replace(/,/g, '').replace(/[a-z]/g, ''); 
+	      let valM = Number(value) * Number(valE);
+	      $('#curM').val(`${addCommas(valM)}`);   
+	      reCalc();  
+	      if(value == ''){
+	        $('#curL').addClass('border border-danger');
+	      }   
+	    }); 
+
+	    //adding commas to current L
+	    $('#newL').keyup(function(){
+	      $('#newL').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearNew').css('display','block'); 
+	      let value = $('#newL').val();
+	      value = value.replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas
+	      checkValue('#newL',value); 
+	      let valE = $('#newE').val().replace(/,/g, '').replace(/[a-z]/g, ''); 
+	      let valM = Number(value) * Number(valE);
+	      $('#newM').val(`${addCommas(valM)}`); 
+	      // $('#difL').val(`${addCommas(findDiff('#curL','#newL'))} %`);
+	      // $('#difM').val(`${addCommas(findDiff('#curM','#newM'))} %`);
+	      reCalcNew();
+	      if(value == ''){
+	        $('#newL').addClass('border border-danger');
+	      } 
+	    }); 
+
+	    //adding commas to current Q on depends R,S,T
+	    $('#curQ').keyup(function(){
+	      $('#curQ').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearCurrent').css('display','block'); 
+
+	      let value = $('#curQ').val();
+	      value = value.replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas
+	      checkValue('#curQ',value); 
+	      let valI = $('#curI').val().replace('$ ', '').replace(/,/g, '').replace(/[a-z]/g, ''); 
+	      let valP = $('#curP').val().replace('$ ', '').replace(/,/g, '').replace(/[a-z]/g, ''); 
+	      let valK = $('#curK').val().replace('$ ', '').replace(/,/g, '').replace(/[a-z]/g, ''); 
+	      let valR = Number(value) * Number(valI);
+	      let valS = Number(valP) + Number(valR);
+	      let valT = Number(valK) + Number(valS);
+	      $('#curR').val(`$ ${addCommas(valR)}`); 
+	      $('#curS').val(`$ ${addCommas(valS)}`); 
+	      $('#curT').val(`$ ${addCommas(valT)}`); 
+	      reCalc();
+	      if(value == ''){
+	        $('#curQ').addClass('border border-danger');
+	      } 
+	            
+	      
+	    });
+
+	    // $('#curQ').on('focusout',function(){
+	    //   if($('#curA').val() != '' && $('#curB').val() != '' && $('#curC').val() != '' && $('#curD').val() != '' && $('#curE').val() != '' && $('#curF').val() != '' && $('#curG').val() != '' && $('#curH').val() != '' && $('#curI').val() != '' && $('#curJ').val() != '' && $('#curK').val() != '' && $('#curL').val() != '' && $('#curM').val() != '' && $('#curN').val() != '' && $('#curO').val() != '' && $('#curP').val() != '' && $('#curQ').val() != '' && $('#curR').val() != '' && $('#curS').val() != '' && $('#curT').val() != ''){
+	    //       $('#compare').css('display','block');
+	    //   }else{
+	    //     $('#compare').css('display','none');
+	    //   }
+	    // });
+
+	    // $('#newQ').on('focusout',function(){
+	    //   if($('#newA').val() != '' && $('#newB').val() != '' && $('#newC').val() != '' && $('#newD').val() != '' && $('#newE').val() != '' && $('#newF').val() != '' && $('#newG').val() != '' && $('#newH').val() != '' && $('#newI').val() != '' && $('#newJ').val() != '' && $('#newK').val() != '' && $('#newL').val() != '' && $('#newM').val() != '' && $('#newN').val() != '' && $('#newO').val() != '' && $('#newP').val() != '' && $('#newQ').val() != '' && $('#newR').val() != '' && $('#newS').val() != '' && $('#newT').val() != ''){
+	    //       $('#compare').css('display','none');
+	    //       $('#clearNew').css('display','none');
+	    //       $('#print').css('display','block');
+
+	    //   }else{
+	    //     $('#compare').css('display','none');
+	    //   }
+	    // });
+
+
+	    //adding commas to new Q on depends R,S,T
+	    $('#newQ').keyup(function(){
+	      $('#newQ').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearNew').css('display','block'); 
+	      let value = $('#newQ').val();
+	      value = value.replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas
+	      checkValue('#newQ',value); 
+	      let valI = $('#newI').val().replace('$ ', '').replace(/,/g, '').replace(/[a-z]/g, ''); 
+	      let valP = $('#newP').val().replace('$ ', '').replace(/,/g, '').replace(/[a-z]/g, ''); 
+	      let valK = $('#newK').val().replace('$ ', '').replace(/,/g, '').replace(/[a-z]/g, ''); 
+	      let valR = Number(value) * Number(valI);
+	      let valS = Number(valP) + Number(valR);
+	      let valT = Number(valK) + Number(valS);
+	      $('#newR').val(`$ ${addCommas(valR)}`); 
+	      $('#newS').val(`$ ${addCommas(valS)}`); 
+	      $('#newT').val(`$ ${addCommas(valT)}`);
+
+	      // $('#difQ').val(`${addCommas(findDiff('#curQ','#newQ'))} %`);
+	      // $('#difR').val(`${addCommas(findDiff('#curR','#newR'))} %`);
+	      // $('#difS').val(`${addCommas(findDiff('#curS','#newS'))} %`);
+	      // $('#difT').val(`${addCommas(findDiff('#curT','#newT'))} %`); 
+	      reCalcNew();
+	      if(value == ''){
+	        $('#newQ').addClass('border border-danger');
+	      } 
+	    });
+
+	    //adding commas to current N
+	    $('#curN').keyup(function(){
+	      $('#curN').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearCurrent').css('display','block'); 
+	      let value = $('#curN').val();
+	      value = value.replace(/,/g, '').replace(/[a-z]/g, '').replace(/%/g,''); // remove dollar sign, commas, %
+	      checkValue('#curN',value);
+	      let valM = $('#curM').val().replace(/,/g, '').replace(/[a-z]/g, '').replace(/%/g,'');
+	      let valB = $('#curB').val().replace('$ ','').replace(/,/g, '').replace(/[a-z]/g, '').replace(/%/g,'');
+	      let valO = Number(value/100) * Number(valM);
+	      $('#curO').val(valO);
+	      let valP = Number(valO)*Number(valB);
+	      $('#curP').val(`$ ${addCommas(valP)}`);
+	      reCalc();
+	      if(value == ''){
+	        $('#curN').addClass('border border-danger');
+	      } 
+	    });
+
+	    $('#curN').on('focusout',function(){
+	      addPercentSignFor('curN');          
+	    });
+
+	    $('#curN').on('focusin',function(){
+	      $('#curN').val('');
+	    });
+
+	    //adding commas to current N
+	    $('#newN').keyup(function(){
+	      $('#newN').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearNew').css('display','block'); 
+	      let value = $('#newN').val();
+	      value = value.replace(/,/g, '').replace(/[a-z]/g, '').replace(/%/g,''); // remove dollar sign, commas, %
+	      checkValue('#newN',value);   
+	      let valM = $('#newM').val().replace(/,/g, '').replace(/[a-z]/g, '').replace(/%/g,'');
+	      let valB = $('#newB').val().replace('$ ','').replace(/,/g, '').replace(/[a-z]/g, '').replace(/%/g,'');
+	      let valO = Number(value/100) * Number(valM);
+	      $('#newO').val(valO);
+	      let valP = Number(valO)*Number(valB);
+	      $('#newP').val(`$ ${addCommas(valP)}`);
+
+	      // $('#difN').val(`${addCommas(findDiff('#curN','#newN'))} %`);
+	      // $('#difO').val(`${addCommas(findDiff('#curO','#newO'))} %`);
+	      // $('#difP').val(`${addCommas(findDiff('#curP','#newP'))} %`);
+	      reCalcNew();
+	      if(value == ''){
+	        $('#newN').addClass('border border-danger');
+	      } 
+	    });
+	        
+	    $('#newN').on('focusout',function(){
+	      addPercentSignFor('newN');
+	    });
+	    $('#newN').on('focusin',function(){
+	      $('#newN').val('');
+	    });
+
+	    //adding commas and $ sign to current I
+	    $('#curI').keyup(function(){
+	      $('#curI').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearCurrent').css('display','block'); 
+	      addDollarSignFor('curI');
+	      let value = $('#curI').val();
+	      value = value.replace('$ ', '').replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas
+	      checkValue('#curI',value);
+	      let val1 = $('#curH').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '');
+	      let val = value * val1;
+	      $('#curJ').val(`$ ${addCommas(val)}`);
+	      let valG = $('#curG').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '');
+	      let valJ = $('#curJ').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '');
+	      let valK = Number(valG) + Number(valJ);
+	      $('#curK').val(`$ ${addCommas(valK)}`); 
+	      reCalc();
+	      if(value == ''){
+	        $('#curI').addClass('border border-danger');
+	      } 
+	    });
+
+	    //adding commas and $ sign to current I
+	    $('#newI').keyup(function(){
+	      $('#newI').removeClass('border border-danger').addClass('border border-primary');
+	      $('#clearNew').css('display','block'); 
+	      addDollarSignFor('newI');
+	      let value = $('#newI').val();
+	      value = value.replace('$ ', '').replace(/,/g, '').replace(/[a-z]/g, ''); // remove dollar sign, commas   
+	      checkValue('#newI',value);
+	      let val1 = $('#newH').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '');
+	      let val = value * val1;
+	      $('#newJ').val(`$ ${addCommas(val)}`);
+	      let valG = $('#newG').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '');   
+	      let valJ = $('#newJ').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '');
+	      let valK = Number(valG) + Number(valJ);
+	      $('#newK').val(`$ ${addCommas(valK)}`); 
+	      // $('#difI').val(`${addCommas(findDiff('#curI','#newI'))} %`);
+	      // $('#difJ').val(`${addCommas(findDiff('#curJ','#newJ'))} %`);
+	      // $('#difK').val(`${addCommas(findDiff('#curK','#newK'))} %`);
+	      reCalcNew();
+	      if(value == ''){
+	        $('#newI').addClass('border border-danger');
+	      } 
+	    });
+	    
+	    //if the compare button is clicked
+	    $('#compare').on('click',function(e){
+	      e.preventDefault();
+
+	        $('.new,.dif').css('display','block');
+	        $('#compare').css('display','none');
+
+	    }); 
+
+	    /*Clear button is clicked*/
+	    $('#clearCurrent').on('click',function(){
+	      //clearing Current column
+	      $('#curA').val('');
+	      $('#curB').val('');
+	      $('#curC').val('');
+	      $('#curD').val('');
+	      $('#curE').val('');
+	      $('#curF').val('');
+	      $('#curG').val('');
+	      $('#curH').val('');
+	      $('#curI').val('');
+	      $('#curJ').val('');
+	      $('#curK').val('');
+	      $('#curL').val('');
+	      $('#curM').val('');
+	      $('#curN').val('');
+	      $('#curO').val('');
+	      $('#curP').val('');
+	      $('#curQ').val('');
+	      $('#curR').val('');
+	      $('#curS').val('');
+	      $('#curT').val('');
+
+	      $('#curA').addClass('border border-danger'); 
+	      $('#curB').addClass('border border-danger'); 
+	      $('#curC').addClass('border border-danger'); 
+	      $('#curD').addClass('border border-danger'); 
+	      $('#curF').addClass('border border-danger'); 
+	      $('#curH').addClass('border border-danger'); 
+	      $('#curI').addClass('border border-danger'); 
+	      $('#curL').addClass('border border-danger'); 
+	      $('#curN').addClass('border border-danger'); 
+	      $('#curQ').addClass('border border-danger'); 
+	      $('#clearCurrent').css('display','none');
+	      $('#compare').css('display','none');
+	      $('.new,.dif').css('display','none');
+	      $('#print').css('display','none');
+	    });
+
+	    /*this button will clear all of the new data*/
+	    $('#clearNew').on('click',function(){
+
+	      //clearing new column
+	      $('#newA').val('');
+	      $('#newB').val('');
+	      $('#newC').val('');
+	      $('#newD').val('');
+	      $('#newE').val('');
+	      $('#newF').val('');
+	      $('#newG').val('');
+	      $('#newH').val('');
+	      $('#newI').val('');
+	      $('#newJ').val('');
+	      $('#newK').val('');
+	      $('#newL').val('');
+	      $('#newM').val('');
+	      $('#newN').val('');
+	      $('#newO').val('');
+	      $('#newP').val('');
+	      $('#newQ').val('');
+	      $('#newR').val('');
+	      $('#newS').val('');
+	      $('#newT').val('');
+
+	      $('#newA').addClass('border border-danger'); 
+	      $('#newB').addClass('border border-danger'); 
+	      $('#newC').addClass('border border-danger'); 
+	      $('#newD').addClass('border border-danger'); 
+	      $('#newF').addClass('border border-danger'); 
+	      $('#newH').addClass('border border-danger'); 
+	      $('#newI').addClass('border border-danger'); 
+	      $('#newL').addClass('border border-danger'); 
+	      $('#newN').addClass('border border-danger'); 
+	      $('#newQ').addClass('border border-danger'); 
+
+	      //clearing difference column
+	      $('#difA').val('');
+	      $('#difB').val('');
+	      $('#difC').val('');
+	      $('#difD').val('');
+	      $('#difE').val('');
+	      $('#difF').val('');
+	      $('#difG').val('');
+	      $('#difH').val('');
+	      $('#difI').val('');
+	      $('#difJ').val('');
+	      $('#difK').val('');
+	      $('#difL').val('');
+	      $('#difM').val('');
+	      $('#difN').val('');
+	      $('#difO').val('');
+	      $('#difP').val('');
+	      $('#difQ').val('');
+	      $('#difR').val('');
+	      $('#difS').val('');
+	      $('#difT').val('');
+	      $('#clearNew').css('display','none');
+	      $('#print').css('display','none');
+	      $('#compare').css('display','none');
+	    });   
+	  }); /*Document ready end*/
+
+	  
+
+
+	/*user difined function section*/
+
+	  //find if the value contains any letter
+	  function checkValue(tagName,value){
+	    if(!isNaN(value)){
+	      // remove dollar sign, commas
+	      if(tagName=='#curC' || tagName=='#newC' || tagName=='#curD' || tagName=='#newD' || tagName=='#curF'|| tagName=='#newF'|| tagName=='#curL'|| tagName=='#curH'|| tagName=='#newH' || tagName=='#newL' || tagName=='#curN' || tagName=='#newN'|| tagName=='#curQ'|| tagName=='#newQ'){
+	        if(value.trim() == ''){
+	          $(tagName).val('');
+	        }else{
+	          $(tagName).val(`${addCommas(value)}`);        
+	        }
+	        
+	      }else{
+	        if(value.trim() == ''){
+	          $(tagName).val('');
+	        }else{
+	          $(tagName).val(`$ ${addCommas(value)}`);        
+	        }
+	      }
+	    }else{
+	      $(tagName).val('');
+	    }   
+	  }
+	  
+	  //pass value to new
+	  function passNew(newTag,value){
+	    if($(newTag).val()==''){
+	      if(newTag=='#newC' ||  newTag=='#newD' ||  newTag=='#newL' ||  newTag=='#newN'){
+	        if(newTag=='#newN'){
+	          $(newTag).val(`${addCommas(value)} %`);
+	        }else
+	          $(newTag).val(`${addCommas(value)}`);
+	      }else{
+	        $(newTag).val(`$ ${addCommas(value)}`);
+	      }
+	    }else{
+	      return;
+	    }
+	  }
+
+	  //find difference
+	  function findDiff(curTag,newTag){
+	    let curValue = $(curTag).val();
+	    let newValue = $(newTag).val();
+	    if(curValue != '' && newValue != ''){
+	      console.log('Executed');
+	      // console.log(curValue);
+	      // console.log(newValue);
+	      curValue = curValue.replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	      newValue = newValue.replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	      let differece = (newValue - curValue)/curValue*100;
+	      return differece;
+	    }else{
+	      return;
+	    }
+	    
+	    
+	  }
+
+
+	  // remove the `$ ` prefix and commas to get the dollar amount, convert to float
+	  function valueOf(tag) {
+	    var dollars = $(tag).val().replace(/(\$\s|,)/g, '').replace(/%/g, '');
+	    return parseFloat(dollars);
+	    // return dollars;
+	  }
+
+	  //myValue
+	  function myValue(tagName){
+	    var tag = `#${tagName}`;
+	    var value = $(tag).val().replace(/(\$\s|,)/g, '');
+	    return parseFloat(value);
+	  }
+
+	  // add commas for every 3 digits
+	  function addCommas(number) {
+	    if(!isNaN(number)){
+	      let result = Number(Math.ceil(number)).toLocaleString();
+	      return result;
+	    }else{
+	      return;
+	    }
+	    
+	  }
+
+	  // Add $ in front of the amount written
+	  function addDollarSignFor(element) {
+	    const elementTag = `#${element}`;
+	    const value = $(elementTag).val();
+
+	    if (value.charAt(0) === '$') return;
+	    $(elementTag).val(`$ ${value}`);
+	  }
+	  // Add $ in front of the amount written
+	  function addPercentSignFor(element) {
+	    const elementTag = `#${element}`;
+	    const value = $(elementTag).val();
+	    let length = value.length;
+
+	    if (value==0 ) {
+	      // console.log('Executed');
+	      $(elementTag).val('');
+	      return;
+	    }
+	    if (value.charAt(length-1) === '%' ){
+	      // console.log('Executed ===');      
+	      return;
+	    } 
+	    $(elementTag).val(`${value} %`);
+	  }
+
+	  function colorBackgroundOf(element, color) {
+	    $( element ).css( { backgroundColor : color });
+	  }
+
+	  function numberOrCap(number, cap) {
+	    const finalValue = parseInt(number) < cap ? number : cap;
+	    return Number(finalValue).toLocaleString();
+	  }
+
+	  //re calculate on change in every time input changes
+
+	  function reCalc(){
+	    let a = $('#curA').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let b = $('#curB').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let c = $('#curC').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let d = $('#curD').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let e = $('#curE').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let f = $('#curF').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let g = $('#curG').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let h = $('#curH').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let i = $('#curI').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let j = $('#curJ').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let k = $('#curK').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let l = $('#curL').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let m = $('#curM').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let n = $('#curN').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let o = $('#curO').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let p = $('#curP').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let q = $('#curQ').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let r = $('#curR').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let s = $('#curS').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let t = $('#curT').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+
+	    if(d != ''){
+	      e = 72 - Number(d); 
+	      $('#curE').val(e);    
+	    }else{
+	      $('#curE').val('');
+	    }
+	    if(b != '' && f != ''){
+	      g = Number(f)*Number(b);
+	      $('#curG').val(`$ ${addCommas(g)}`);
+	    }else{
+	      $('#curG').val('')
+	    }
+	    if(h != '' && i != ''){
+	      j = Number(h)*Number(i);
+	      $('#curJ').val(`$ ${addCommas(j)}`);
+	    }else{
+	      $('#curJ').val('')
+	    }
+	    if(g != '' && j != ''){
+	      k = Number(g)+Number(j);
+	      $('#curK').val(`$ ${addCommas(k)}`);
+	    }else{
+	      $('#curK').val('');
+	    }
+
+	    if(l != '' && e != ''){
+	      m = Number(l)*Number(e);
+	      $('#curM').val(`${addCommas(m)}`);
+	    }else{
+	      $('#curM').val('');
+	    }
+
+	    if(m != '' && n != ''){
+	      o = Number(m)*Number(n)/100;
+	      $('#curO').val(`${addCommas(o)}`);
+	    }else{
+	      $('#curO').val(`${addCommas(o)}`);
+	    }
+	    if(o != '' && b != ''){
+	      p = Number(o)*Number(b);
+	      $('#curP').val(`$ ${addCommas(p)}`);
+	    }else{
+	      $('#curP').val('');
+	      
+	    }
+
+	    if(q != '' && i != ''){
+	      r = Number(q)*Number(i);
+	      $('#curR').val(`$ ${addCommas(r)}`);
+	    }else{
+	      $('#curR').val('');
+	    }
+
+	    if(p != '' && r != ''){
+	      s = Number(p)+Number(r);
+	      $('#curS').val(`$ ${addCommas(s)}`);
+	    }else{
+	      $('#curS').val('');
+	    }
+	    if(k != '' && s != ''){
+	      t = Number(k)+Number(s);
+	      $('#curT').val(`$ ${addCommas(t)}`);
+	    }else{
+	      $('#curT').val();
+	    }
+
+	    /*finding the differences*/
+	    let aa = findDiff('#curA','#newA');
+	    let bb = findDiff('#curB','#newB');
+	    let cc = findDiff('#curC','#newC');
+	    let dd = findDiff('#curD','#newD');
+	    let ee = findDiff('#curE','#newE');
+	    let ff = findDiff('#curF','#newF');
+	    let gg = findDiff('#curG','#newG');
+	    let hh = findDiff('#curH','#newH');
+	    let ii = findDiff('#curI','#newI');
+	    let jj = findDiff('#curJ','#newJ');
+	    let kk = findDiff('#curK','#newK');
+	    let ll = findDiff('#curL','#newL');
+	    let mm = findDiff('#curM','#newM');
+	    let nn = findDiff('#curN','#newN');
+	    let oo = findDiff('#curO','#newO');
+	    let pp = findDiff('#curP','#newP');
+	    let qq = findDiff('#curQ','#newQ');
+	    let rr = findDiff('#curR','#newR');
+	    let ss = findDiff('#curS','#newS');
+	    let tt = findDiff('#curT','#newT');
+
+	    if(typeof aa != 'undefined'){
+	      aa = aa.toFixed(2);
+	      $('#difA').val(`${aa} %`);
+	    }else{
+	      $('#difA').val('');      
+	    }
+
+	    if(typeof bb != 'undefined'){
+	      bb = bb.toFixed(2);
+	      $('#difB').val(`${bb} %`);
+	    }else{
+	      $('#difB').val('');      
+	    }
+
+	    if(typeof cc != 'undefined'){
+	      cc = cc.toFixed(2);
+	      $('#difC').val(`${cc} %`);
+	    }else{
+	      $('#difC').val('');      
+	    }
+
+	    if(typeof dd != 'undefined'){
+	      dd = dd.toFixed(2);
+	      $('#difD').val(`${dd} %`);
+	    }else{
+	      $('#difD').val('');      
+	    }
+
+	    if(typeof ee != 'undefined'){
+	      ee = ee.toFixed(2);
+	      $('#difE').val(`${ee} %`);
+	    }else{
+	      $('#difE').val('');      
+	    }
+
+	    if(typeof ff != 'undefined'){
+	      ff = ff.toFixed(2);
+	      $('#difF').val(`${ff} %`);
+	    }else{
+	      $('#difF').val('');      
+	    }
+
+	    if(typeof gg != 'undefined'){
+	      gg = gg.toFixed(2);
+	      $('#difG').val(`${gg} %`);
+	    }else{
+	      $('#difG').val('');      
+	    }
+
+	    if(typeof hh != 'undefined'){
+	      hh = hh.toFixed(2);
+	      $('#difH').val(`${hh} %`);
+	    }else{
+	      $('#difH').val('');      
+	    }
+
+	    if(typeof ii != 'undefined'){
+	      ii = ii.toFixed(2);
+	      $('#difI').val(`${ii} %`);
+	    }else{
+	      $('#difI').val('');      
+	    }
+
+	    if(typeof jj != 'undefined'){
+	      jj = jj.toFixed(2);
+	      $('#difJ').val(`${jj} %`);
+	    }else{
+	      $('#difJ').val('');      
+	    }
+
+	    if(typeof kk != 'undefined'){
+	      kk = kk.toFixed(2);
+	      $('#difK').val(`${kk} %`);
+	    }else{
+	      $('#difK').val('');      
+	    }
+
+	    if(typeof ll != 'undefined'){
+	      ll = ll.toFixed(2);
+	      $('#difL').val(`${ll} %`);
+	    }else{
+	      $('#difL').val('');      
+	    }
+
+	    if(typeof mm != 'undefined'){
+	      mm = mm.toFixed(2);
+	      $('#difM').val(`${mm} %`);
+	    }else{
+	      $('#difM').val('');      
+	    }
+
+	    if(typeof nn != 'undefined'){
+	      nn = nn.toFixed(2);
+	      $('#difN').val(`${nn} %`);
+	    }else{
+	      $('#difN').val('');      
+	    }
+
+	    if(typeof oo != 'undefined'){
+	      oo = oo.toFixed(2);
+	      $('#difO').val(`${oo} %`);
+	    }else{
+	      $('#difO').val('');      
+	    }
+
+	    if(typeof pp != 'undefined'){
+	      pp = pp.toFixed(2);
+	      $('#difP').val(`${pp} %`);
+	    }else{
+	      $('#difP').val('');      
+	    }
+
+	    if(typeof qq != 'undefined'){
+	      qq = qq.toFixed(2);
+	      $('#difQ').val(`${qq} %`);
+	    }else{
+	      $('#difQ').val('');      
+	    }
+
+	    if(typeof rr != 'undefined'){
+	      rr = rr.toFixed(2);
+	      $('#difR').val(`${rr} %`);
+	    }else{
+	      $('#difR').val('');      
+	    }
+
+	    if(typeof ss != 'undefined'){
+	      ss = ss.toFixed(2);
+	      $('#difS').val(`${ss} %`);
+	    }else{
+	      $('#difS').val('');      
+	    }
+
+	    if(typeof tt != 'undefined'){
+	      tt = tt.toFixed(2);
+	      $('#difT').val(`${tt} %`);
+	    }else{
+	      $('#difT').val('');      
+	    }
+
+
+
+	    if($('#curA').val() != '' && $('#curB').val() != '' && $('#curC').val() != '' && $('#curD').val() != '' && $('#curE').val() != '' && $('#curF').val() != '' && $('#curG').val() != '' && $('#curH').val() != '' && $('#curI').val() != '' && $('#curJ').val() != '' && $('#curK').val() != '' && $('#curL').val() != '' && $('#curM').val() != '' && $('#curN').val() != '' && $('#curO').val() != '' && $('#curP').val() != '' && $('#curQ').val() != '' && $('#curR').val() != '' && $('#curS').val() != '' && $('#curT').val() != ''){
+	          $('#compare').css('display','block');
+	          checkForInputInNew();
+	      }else{
+	        $('#compare').css('display','none');
+	      }
+
+
+
+	  }
+
+	  //re calculate on change in every time input changes
+	  function reCalcNew(){
+	    let a = $('#newA').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let b = $('#newB').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let c = $('#newC').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let d = $('#newD').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let e = $('#newE').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let f = $('#newF').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let g = $('#newG').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let h = $('#newH').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let i = $('#newI').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let j = $('#newJ').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let k = $('#newK').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let l = $('#newL').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let m = $('#newM').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let n = $('#newN').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let o = $('#newO').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let p = $('#newP').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let q = $('#newQ').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let r = $('#newR').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let s = $('#newS').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+	    let t = $('#newT').val().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+
+	    if(d != ''){
+	      e = 72 - Number(d); 
+	      $('#newE').val(e);    
+	    }else{
+	      $('#newE').val('');
+	    }
+	    if(b != '' && f != ''){
+	      g = Number(f)*Number(b);
+	      $('#newG').val(`$ ${addCommas(g)}`);
+	    }else{
+	      $('#newG').val('')
+	    }
+	    if(h != '' && i != ''){
+	      j = Number(h)*Number(i);
+	      $('#newJ').val(`$ ${addCommas(j)}`);
+	    }else{
+	      $('#newJ').val('')
+	    }
+	    if(g != '' && j != ''){
+	      k = Number(g)+Number(j);
+	      $('#newK').val(`$ ${addCommas(k)}`);
+	    }else{
+	      $('#newK').val('');
+	    }
+
+	    if(l != '' && e != ''){
+	      m = Number(l)*Number(e);
+	      $('#newM').val(`${addCommas(m)}`);
+	    }else{
+	      $('#newM').val('');
+	    }
+
+	    if(m != '' && n != ''){
+	      o = Number(m)*Number(n)/100;
+	      $('#newO').val(`${addCommas(o)}`);
+	    }else{
+	      $('#newO').val(`${addCommas(o)}`);
+	    }
+	    if(o != '' && b != ''){
+	      p = Number(o)*Number(b);
+	    }else{
+	      p = Number(o)*Number(b);
+	    }
+
+	    if(q != '' && i != ''){
+	      r = Number(q)*Number(i);
+	      $('#newR').val(`$ ${addCommas(r)}`);
+	    }else{
+	      $('#newR').val('');
+	    }
+
+	    if(p != '' && r != ''){
+	      s = Number(p)+Number(r);
+	      $('#newS').val(`$ ${addCommas(s)}`);
+	    }else{
+	      $('#newS').val('');
+	    }
+	    if(k != '' && s != ''){
+	      t = Number(k)+Number(s);
+	      $('#newT').val(`$ ${addCommas(t)}`);
+	    }else{
+	      $('#newT').val();
+	    }
+
+	    /*finding the differences*/
+	    let aa = findDiff('#curA','#newA');
+	    let bb = findDiff('#curB','#newB');
+	    let cc = findDiff('#curC','#newC');
+	    let dd = findDiff('#curD','#newD');
+	    let ee = findDiff('#curE','#newE');
+	    let ff = findDiff('#curF','#newF');
+	    let gg = findDiff('#curG','#newG');
+	    let hh = findDiff('#curH','#newH');
+	    let ii = findDiff('#curI','#newI');
+	    let jj = findDiff('#curJ','#newJ');
+	    let kk = findDiff('#curK','#newK');
+	    let ll = findDiff('#curL','#newL');
+	    let mm = findDiff('#curM','#newM');
+	    let nn = findDiff('#curN','#newN');
+	    let oo = findDiff('#curO','#newO');
+	    let pp = findDiff('#curP','#newP');
+	    let qq = findDiff('#curQ','#newQ');
+	    let rr = findDiff('#curR','#newR');
+	    let ss = findDiff('#curS','#newS');
+	    let tt = findDiff('#curT','#newT');
+
+	    if(typeof aa != 'undefined'){
+	      aa = aa.toFixed(2);
+	      $('#difA').val(`${aa} %`);
+	    }else{
+	      $('#difA').val('');      
+	    }
+
+	    if(typeof bb != 'undefined'){
+	      bb = bb.toFixed(2);
+	      $('#difB').val(`${bb} %`);
+	    }else{
+	      $('#difB').val('');      
+	    }
+
+	    if(typeof cc != 'undefined'){
+	      cc = cc.toFixed(2);
+	      $('#difC').val(`${cc} %`);
+	    }else{
+	      $('#difC').val('');      
+	    }
+
+	    if(typeof dd != 'undefined'){
+	      dd = dd.toFixed(2);
+	      $('#difD').val(`${dd} %`);
+	    }else{
+	      $('#difD').val('');      
+	    }
+
+	    if(typeof ee != 'undefined'){
+	      ee = ee.toFixed(2);
+	      $('#difE').val(`${ee} %`);
+	    }else{
+	      $('#difE').val('');      
+	    }
+
+	    if(typeof ff != 'undefined'){
+	      ff = ff.toFixed(2);
+	      $('#difF').val(`${ff} %`);
+	    }else{
+	      $('#difF').val('');      
+	    }
+
+	    if(typeof gg != 'undefined'){
+	      gg = gg.toFixed(2);
+	      $('#difG').val(`${gg} %`);
+	    }else{
+	      $('#difG').val('');      
+	    }
+
+	    if(typeof hh != 'undefined'){
+	      hh = hh.toFixed(2);
+	      $('#difH').val(`${hh} %`);
+	    }else{
+	      $('#difH').val('');      
+	    }
+
+	    if(typeof ii != 'undefined'){
+	      ii = ii.toFixed(2);
+	      $('#difI').val(`${ii} %`);
+	    }else{
+	      $('#difI').val('');      
+	    }
+
+	    if(typeof jj != 'undefined'){
+	      jj = jj.toFixed(2);
+	      $('#difJ').val(`${jj} %`);
+	    }else{
+	      $('#difJ').val('');      
+	    }
+
+	    if(typeof kk != 'undefined'){
+	      kk = kk.toFixed(2);
+	      $('#difK').val(`${kk} %`);
+	    }else{
+	      $('#difK').val('');      
+	    }
+
+	    if(typeof ll != 'undefined'){
+	      ll = ll.toFixed(2);
+	      $('#difL').val(`${ll} %`);
+	    }else{
+	      $('#difL').val('');      
+	    }
+
+	    if(typeof mm != 'undefined'){
+	      mm = mm.toFixed(2);
+	      $('#difM').val(`${mm} %`);
+	    }else{
+	      $('#difM').val('');      
+	    }
+
+	    if(typeof nn != 'undefined'){
+	      nn = nn.toFixed(2);
+	      $('#difN').val(`${nn} %`);
+	    }else{
+	      $('#difN').val('');      
+	    }
+
+	    if(typeof oo != 'undefined'){
+	      oo = oo.toFixed(2);
+	      $('#difO').val(`${oo} %`);
+	    }else{
+	      $('#difO').val('');      
+	    }
+
+	    if(typeof pp != 'undefined'){
+	      pp = pp.toFixed(2);
+	      $('#difP').val(`${pp} %`);
+	    }else{
+	      $('#difP').val('');      
+	    }
+
+	    if(typeof qq != 'undefined'){
+	      qq = qq.toFixed(2);
+	      $('#difQ').val(`${qq} %`);
+	    }else{
+	      $('#difQ').val('');      
+	    }
+
+	    if(typeof rr != 'undefined'){
+	      rr = rr.toFixed(2);
+	      $('#difR').val(`${rr} %`);
+	    }else{
+	      $('#difR').val('');      
+	    }
+
+	    if(typeof ss != 'undefined'){
+	      ss = ss.toFixed(2);
+	      $('#difS').val(`${ss} %`);
+	    }else{
+	      $('#difS').val('');      
+	    }
+
+	    if(typeof tt != 'undefined'){
+	      tt = tt.toFixed(2);
+	      $('#difT').val(`${tt} %`);
+	    }else{
+	      $('#difT').val('');      
+	    }
+
+	    if($('#newA').val() != '' && $('#newB').val() != '' && $('#newC').val() != '' && $('#newD').val() != '' && $('#newE').val() != '' && $('#newF').val() != '' && $('#newG').val() != '' && $('#newH').val() != '' && $('#newI').val() != '' && $('#newJ').val() != '' && $('#newK').val() != '' && $('#newL').val() != '' && $('#newM').val() != '' && $('#newN').val() != '' && $('#newO').val() != '' && $('#newP').val() != '' && $('#newQ').val() != '' && $('#newR').val() != '' && $('#newS').val() != '' && $('#newT').val() != ''){
+	          $('#print').css('display','block');
+	      }else{
+	        $('#print').css('display','none');
+	      }
+	  }
+
+
+	  function checkForInputInNew(){
+	  	if($('#newA').val() != '' || $('#newB').val() != '' || $('#newC').val() != '' || $('#newD').val() != '' || $('#newE').val() != '' || $('#newF').val() != '' || $('#newG').val() != '' || $('#newH').val() != '' || $('#newI').val() != '' || $('#newJ').val() != '' || $('#newK').val() != '' || $('#newL').val() != '' || $('#newM').val() != '' || $('#newN').val() != '' || $('#newO').val() != '' || $('#newP').val() != '' || $('#newQ').val() != '' || $('#newR').val() != '' || $('#newS').val() != '' || $('#newT').val() != ''){
+	          $('#compare').css('display','none');
+	      }/*else{
+	        $('#compare').css('display','none');
+	      }*/
+	  }
+
+	</script>
+</body>
+</html>

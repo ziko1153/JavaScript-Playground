@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Car Loan Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+  <script type="text/javascript" src='js/jquery.min.js'></script>
+  <script  type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container" style="align-content: center;">
+    <div class="row">
+      <div class="col-md-9">
+        <h1 class="text-danger text-center">Car Loan Calculator</h1>        
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        Price of the new vehicle
+      </div>
+      <div class="col-md-6">
+        <div class="input-group mb-3">        
+          <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+          </div>
+          <input type="text" class="form-control" id="price">
+          <!-- <div class="input-group-append">
+            <span class="input-group-text">.00</span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        Trade-in value
+      </div>
+      <div class="col-md-6">
+        <div class="input-group mb-3">        
+          <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+          </div>
+          <input type="text" class="form-control" id="tradeIn">
+          <!-- <div class="input-group-append">
+            <span class="input-group-text">.00</span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        Down Payment
+      </div>
+      <div class="col-md-6">
+        <div class="input-group mb-3">        
+          <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+          </div>
+          <input type="text" class="form-control" id="downPayment">
+          <!-- <div class="input-group-append">
+            <span class="input-group-text">.00</span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        Duration of the loan
+      </div>
+      <div class="col-md-6">
+        <div class="input-group mb-3">        
+          <!-- <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+          </div> -->
+          <input type="text" class="form-control" id="duration">
+          <div class="input-group-append">
+            <span class="input-group-text">Months</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        Sales tax
+      </div>
+      <div class="col-md-6">
+        <div class="input-group mb-3">        
+          <!-- <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+          </div> -->
+          <input type="text" class="form-control" id="salesTax">
+          <div class="input-group-append">
+            <span class="input-group-text">%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        Annual interest rate
+      </div>
+      <div class="col-md-6">
+        <div class="input-group mb-3">        
+          <!-- <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+          </div> -->
+          <input type="text" class="form-control" id="apr">
+          <div class="input-group-append">
+            <span class="input-group-text">%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-9">
+        <button class="btn btn-primary btn-lg btn-block" id="calculate">Calculate</button>        
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-md-5">
+        The amount of the loan will be
+      </div>
+      <div class="col-md-4">
+        <div class="input-group mb-3">        
+          <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+          </div>
+          <input type="text" class="form-control" id="loanAmount" readonly>
+          <!-- <div class="input-group-append">
+            <span class="input-group-text">%</span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-9">
+        <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Payment frequency</th>
+              <th scope="col">Payment amount</th>
+              <th scope="col">Total interest to be paid over the duration of the loan</th>
+            </tr>
+          </thead> 
+          <tbody>
+            <tr>
+              <td>Monthly</td>
+              <td><input id="monthlyPayment" type="text" class="form-control text-right" readonly></td>
+              <td><input id="totalMonthlyInterest" type="text" class="form-control text-right" readonly></td>
+            </tr> 
+            <tr>
+              <td>Bi-weekly</td>
+              <td><input id="biWeeklyPayment" type="text" class="form-control text-right" readonly></td>
+              <td><input id="totalBiWeeklyInterest" type="text" class="form-control text-right" readonly></td>
+            </tr> 
+            <tr>
+              <td>Weekly</td>
+              <td><input id="weeklyPayment" type="text" class="form-control text-right" readonly></td>
+              <td><input id="totalWeeklyInterest" type="text" class="form-control text-right" readonly></td>
+            </tr>     
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    
+    $(document).ready(function(){     
+
+      $('#calculate').on('click',function(){
+        var price = $('#price').val().trim();
+        var salesTax = $('#salesTax').val().trim();
+        var apr =$('#apr').val().trim();
+        var duration = $('#duration').val().trim();
+        var downPayment = $('#downPayment').val().trim();
+        var tradeIn = $('#tradeIn').val().trim();
+
+
+
+        var a = price - downPayment + (price*salesTax/100) - tradeIn;
+        var n = duration;
+        var r = apr/(12*100);
+        var p = (a*r*Math.pow((1+r),n))/(Math.pow((1+r),n)-1);
+        var prin = Math.round(p*100)/100;
+        var totalMonthlyInterest = Math.round(computeFixedInterestCost(a,apr,prin));
+        var biWeekly = (12*prin)/26;
+        var weekly = (12*prin)/52;
+
+        var totalBiWeekly = calculateBiWeeklyTotalInterest(a,apr,biWeekly);
+        var totalWeekly = calculateWeeklyTotalInterest(a,apr,weekly);
+
+        /*console.log('Loan Amount = '+a);
+        console.log('\nTotal Month = '+n);
+        console.log('\nValue of P = '+p);
+        console.log('\nValue of prin(Monthly payment)'+prin);
+        console.log('\nValue of prin(Monthly payment)'+Math.round(prin));
+        console.log('\nValue of prin(Bi-Weekly payment)'+Math.round(biWeekly));
+        console.log('\nValue of prin(Weekly payment)'+Math.round(weekly));
+        console.log('\nTotal Monthly Interest through the loan period = '+totalMonthlyInterest);
+
+        console.log('\nTotal Bi-Weekly Interest through the loan period = '+totalBiWeekly);
+        console.log('\nTotal Weekly Interest through the loan period = '+totalWeekly);  */
+
+        $('#weeklyPayment').val(weekly.toFixed(2));
+        $('#biWeeklyPayment').val(biWeekly.toFixed(2));
+        $('#monthlyPayment').val(prin.toFixed(2));
+        $('#totalMonthlyInterest').val(totalMonthlyInterest.toFixed(2));
+        $('#totalBiWeeklyInterest').val(totalBiWeekly.toFixed(2));
+        $('#totalWeeklyInterest').val(totalWeekly.toFixed(2));
+        $('#loanAmount').val(a);
+
+      });
+    });
+
+    //this function will find how much interest paid monthly through the duration of the loan
+    function computeFixedInterestCost(principal, intRate, pmtAmt) { 
+         var i = Math.round(intRate);
+         i /= 100;
+         i /= 12;
+
+         var prin = Math.round(principal);
+         var intPort = 0;
+         var accumInt = 0;
+         var prinPort = 0;
+         var pmtCount = 0;
+         var testForLast = 0;
+
+
+         //CYCLES THROUGH EACH PAYMENT OF GIVEN DEBT
+         while(prin > 0) {
+            testForLast = (prin * (1 + i));
+            if(pmtAmt < testForLast) {
+              intPort = prin * i;
+              accumInt =(accumInt) +(intPort);
+              prinPort =(pmtAmt) -(intPort);
+              prin =(prin) -(prinPort);
+            } else {
+              //DETERMINE FINAL PAYMENT AMOUNT
+              intPort = prin * i;
+              accumInt = (accumInt) + (intPort);
+              prinPort = prin;
+              prin = 0;
+            }
+
+            pmtCount = (pmtCount) + (1);
+
+            if(pmtCount > 1000 || accumInt > 1000000000) {
+              prin = 0;
+            }
+
+         }
+
+        return accumInt;
+
+      }
+      //this function will find how much interest paid bi-Weekly through the duration of the loan
+      function calculateBiWeeklyTotalInterest(principal,VintRate,Vbiweekly_pmt){
+          var biweekly_prin = principal;
+          var intPort = 0;
+          var prinPort = 0;
+          var accumInt = 0;
+          var accumPrin = 0;
+
+          var i = VintRate;
+          if(i >= 1.0) {
+             i = i / 100.0;
+          }
+
+          i = i / 26;
+
+          var count = 0;
+
+          while(biweekly_prin > 0) {
+
+             intPort = biweekly_prin * i;
+             prinPort = (Vbiweekly_pmt) - (intPort);
+             biweekly_prin = (biweekly_prin) - (prinPort);
+             accumPrin = (accumPrin) + (prinPort);
+             accumInt = (accumInt) + (intPort);
+
+             count = count + 1;
+
+             if(count > 600) {
+                break;
+             } else {
+                continue;
+             }
+
+          }
+          return accumInt;
+      }
+      //this function will find how much interest paid Weekly through the duration of the loan
+      function calculateWeeklyTotalInterest(principal,VintRate,weekly_pmt){
+          var weekly_prin = principal;
+          var intPort = 0;
+          var prinPort = 0;
+          var accumInt = 0;
+          var accumPrin = 0;
+
+          var i = VintRate;
+          if(i >= 1.0) {
+             i = i / 100.0;
+          }
+
+          i = i / 52;
+
+          var count = 0;
+
+          while(weekly_prin > 0) {
+
+             intPort = weekly_prin * i;
+             prinPort = (weekly_pmt) - (intPort);
+             weekly_prin = (weekly_prin) - (prinPort);
+             accumPrin = (accumPrin) + (prinPort);
+             accumInt = (accumInt) + (intPort);
+
+             count = count + 1;
+
+             if(count > 600) {
+                break;
+             } else {
+                continue;
+             }
+
+          }
+          return accumInt;
+      }
+  </script>
+</body>
+</html>
