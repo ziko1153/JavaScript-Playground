@@ -1,0 +1,457 @@
+
+<html>
+  <head>
+    <title>Deal Information</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="calc.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+    <script type="text/javascript" src='js/jquery.min.js'></script>
+  <script  type="text/javascript" src="js/bootstrap.min.js"></script>
+  
+  </head>
+  <body class="" >
+  <div class="row">
+  <div align="left" class="col-md-12">
+  <h2 id='title'><b>Deal Information</b></h2>
+  <hr style="height:1px;border:none;color:#333;background-color:#333;">
+  </div>
+  </div>
+ 
+
+
+<div class="container">
+    <div class="row">
+
+ <!-- Here is the Input  Div -->
+  <div class="col-md-6">
+
+    <div class="row">
+        <div class="col-md-4">
+          <h6 class=''>Selling Price</h6>
+          </div>
+         <div class="col-md-3">
+           <input class="checkForDot" id="a" type="" autocomplete="off" name="">
+         </div>
+    </div>
+
+    <div class="row" style="margin-top:5px;">
+        <div class="col-md-4">
+          <h6 class=''>Warranty</h6>
+          </div>
+         <div class="col-md-3">
+           <input id="b" class="checkForDot" autocomplete="off" type="" name="">
+         </div>
+    </div>
+
+    <div class="row" style="margin-top:5px;">
+        <div class="col-md-4">
+          <h6 class=''>Vehicle History Report</h6>
+          </div>
+         <div class="col-md-3">
+           <input id="c" class="checkForDot" autocomplete="off" type="" name="">
+         </div>
+    </div>
+
+    <div class="row" style="margin-top:5px;">
+        <div class="col-md-4">
+          <h6 class=''>Safety Certificate</h6>
+          </div>
+         <div class="col-md-3">
+           <input id="d" class="checkForDot"  autocomplete="off" type="" name="">
+         </div>
+    </div>
+
+    <div class="row" style="margin-top:5px;">
+        <div class="col-md-4">
+          <h6 class=''>OMVIC Fees</h6>
+          </div>
+         <div class="col-md-3">
+           <input id="e" class="checkForDot" autocomplete="off" type="" name="">
+         </div>
+    </div>
+
+    <div class="row" style="margin-top:5px;">
+        <div class="col-md-4">
+          <h6 class=''>License Fees</h6>
+          </div>
+         <div class="col-md-4">
+           <input id="f" type="" class="checkForDot"  autocomplete="off" name="">
+         </div>
+    </div>
+
+    <div class="row" style="margin-top:5px;">
+        <div class="col-md-4">
+          <h6 class=''>Gasoline Fees</h6>
+          </div>
+         <div class="col-md-3">
+           <input id="g" type="" class="checkForDot"  autocomplete="off" name="">
+         </div>
+    </div>
+
+    <div class="row" style="margin-top:5px;">
+        <div class="col-md-4">
+          <h6 class=''>Trade Value</h6>
+          </div>
+         <div class="col-md-3">
+           <input id="h" type="" class="checkForDot"  autocomplete="off" name="">
+         </div>
+    </div>
+
+    <div class="row" style="margin-top:5px;">
+        <div class="col-md-4">
+          <h6 class=''>Deposite</h6>
+          </div>
+         <div class="col-md-3">
+           <input id="i" type="" class="checkForDot"   autocomplete="off" name="">
+         </div>
+    </div>
+
+  </div>
+
+
+  <!-- Here is the Output Div -->
+
+  <div class="col-md-6">
+    <div class="row">
+          <div class="col-md-4">
+          <h6 class=''>Vehicle Price</h6>
+          </div>
+         <div class="col-md-3">
+         <div id="_1"></div>
+         </div>
+    </div>
+
+    <div class="row">
+          <div class="col-md-4">
+          <h6 class=''>Fees</h6>
+          </div>
+         <div class="col-md-3">
+         <div id="_2"></div>
+         </div>
+    </div>
+
+       <div class="row">
+          <div class="col-md-4">
+          <h6 class=''>Total Price</h6>
+          </div>
+         <div class="col-md-3">
+         <div id="_3"></div>
+         </div>
+    </div>
+
+       <div class="row">
+          <div class="col-md-4">
+          <h6 class=''>Trade Value</h6>
+          </div>
+         <div class="col-md-3">
+         <div id="_4"></div>
+         </div>
+    </div>
+
+       <div class="row">
+          <div class="col-md-4">
+          <h6 class=''>Subtotal</h6>
+          </div>
+         <div class="col-md-3">
+         <div id="_5"></div>
+         </div>
+    </div>
+
+       <div class="row">
+          <div class="col-md-4">
+          <h6 class=''>Tax</h6>
+          </div>
+         <div class="col-md-3">
+         <div data-tax_amount = "13" id="_6"></div>
+         </div>
+    </div>
+
+       <div class="row">
+          <div class="col-md-4">
+          <h6 class=''>License and Gasoline</h6>
+          </div>
+         <div class="col-md-3">
+         <div id="_7"></div>
+         </div>
+    </div>
+       <div class="row">
+          <div class="col-md-4">
+          <h6 class=''>Grand Total</h6>
+          </div>
+         <div class="col-md-3">
+         <div id="_8"></div>
+         </div>
+    </div>
+
+       <div class="row">
+          <div class="col-md-4">
+          <h6 class=''>Deposit</h6>
+          </div>
+         <div class="col-md-3">
+         <div id="_9"></div>
+         </div>
+    </div>
+    
+       <hr style="height:1px;border:none;color:#333;background-color:#333;">
+   
+    <div class="row">
+          <div class="col-md-4">
+          <h6 class=''>Total Balance Due</h6>
+          </div>
+         <div class="col-md-3">
+         <div id="_10"></div>
+         </div>
+    </div>
+       
+   </div>
+
+   </div>
+ </div>
+
+
+
+ <script type="text/javascript">
+
+  
+  $(document).ready(function() {
+
+var original='';
+  $('.checkForDot').on('input', function() {
+
+
+let value = $(this).val();
+
+
+     value = value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); /// here replace double dot and any character
+
+     if (/\./i.test(value)){
+      original = value;
+      flt = value.indexOf(".");
+      decimal  = value.substr(0,flt);
+      x = value.substr(flt,3); 
+    value =  decimal+x;
+      
+}
+    value =  value.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"); /// here add comma 
+
+    if(value==""){
+  $(this).val("");
+   reCalc();
+  return;
+}
+
+     $(this).val(`$ ${value}`);
+
+     reCalc();
+
+  });
+  
+
+
+
+
+   
+  }); /*Document ready end*/
+
+  
+
+
+  //re calculate on change in every time input changes
+  function reCalc(){
+    let a = $('#a').val().replace(/,/g, '').replace('$ ', '');
+    let b = $('#b').val().replace(/,/g, '').replace('$ ', '');
+    let c = $('#c').val().replace(/,/g, '').replace('$ ', '');
+    let d = $('#d').val().replace(/,/g, '').replace('$ ', '');
+    let e = $('#e').val().replace(/,/g, '').replace('$ ', '');
+    let f = $('#f').val().replace(/,/g, '').replace('$ ', '');
+    let g = $('#g').val().replace(/,/g, '').replace('$ ', '');
+    let h = $('#h').val().replace(/,/g, '').replace('$ ', '');
+    let i = $('#i').val().replace(/,/g, '').replace('$ ', '');
+
+    let _1 = $('#_1').text().replace(/,/g, '').replace('$ ', '');
+    let _2 = $('#_2').html().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+    let _3 = $('#_3').html().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+    let _4 = $('#_4').html().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+    let _5 = $('#_5').html().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+    let _6 = $('#_6').html().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+    let _7 = $('#_7').html().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+    let _8 = $('#_8').html().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+    let _9 = $('#_9').html().replace(/,/g, '').replace('$ ', '').replace(/[a-z]/g, '').replace(/%/g, '');
+
+      $("#_1").html($("#a").val()); 
+
+    if(b!=""||c!=""||d!=""||e!=""){   
+      if(b=="")b=0;
+      if(c=="")c=0;
+      if(d=="")d=0;
+      if(e=="")e=0;
+
+      let value = parseFloat(b)+parseFloat(c)+parseFloat(d)+parseFloat(e);
+      value = value.toString();
+           if (/\./i.test(value)){
+      original = value;
+      flt = value.indexOf(".");
+      decimal  = value.substr(0,flt);
+      x = value.substr(flt,3); 
+    value =  decimal+x;
+      
+}
+
+   total = value.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+     $("#_2").html(`$ ${total}`); 
+
+
+    }else{
+      $("#_2").html(''); 
+    }
+
+    //// Here Is the formula for Total Price 
+total_price = parseFloat($('#_1').text().replace(/,/g, '').replace('$ ', '')) + parseFloat($('#_2').text().replace(/,/g, '').replace('$ ', ''));
+ total_price = total_price.toString();
+   
+   if(total_price!="NaN"){
+   total_price = total_price.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+  $("#_3").html('$ '+total_price);
+
+}else{
+    $("#_3").html('');
+}
+
+
+///// Here is the calculate for trade value 
+///
+
+$("#_4").html($("#h").val());
+
+
+///// here is the subtotal
+
+sub_total = parseFloat($('#_3').text().replace(/,/g, '').replace('$ ', '')) - parseFloat($('#_4').text().replace(/,/g, '').replace('$ ', ''));
+ sub_total = sub_total.toString();
+   
+   if(sub_total!="NaN"){
+   sub_total = sub_total.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+  $("#_5").html('$ '+sub_total);
+
+}else{
+   $("#_5").html(' ');
+}
+
+
+
+///// here is The  For Tax Calculation
+///
+
+    a = $('#a').val().replace(/,/g, '').replace('$ ', '');
+    b = $('#b').val().replace(/,/g, '').replace('$ ', '');
+    c = $('#c').val().replace(/,/g, '').replace('$ ', '');
+    d = $('#d').val().replace(/,/g, '').replace('$ ', '');
+    e = $('#e').val().replace(/,/g, '').replace('$ ', '');
+
+      if(a==""||a=="NaN")a=0;
+      if(b==""||b=="NaN")b=0;
+      if(c==""||c=="NaN")c=0;
+      if(d==""||d=="NaN")d=0;
+      if(e==""||e=="NaN")e=0;
+      
+
+         tax = parseFloat($("#_6").data("tax_amount"));
+
+   total_tax = (a*tax+b*tax+c*tax+d*tax+e*tax)/100;
+
+    total_tax = total_tax.toString();
+   if(total_tax!="NaN"&&total_tax!=0){
+   total_tax = total_tax.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+  $("#_6").html('$ '+total_tax);
+
+}else{
+   $("#_6").html(' ');
+}
+
+
+////// Here is The License And Gasoline Formula 
+///
+
+ if(f==""||f=="NaN")f=0;
+ if(g==""||g=="NaN")g=0;
+lic_gas = parseFloat(f)+parseFloat(g);
+   lic_gas = lic_gas.toString();
+   if(lic_gas!="NaN"){
+   lic_gas = lic_gas.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+  $("#_7").html('$ '+lic_gas);
+
+}else{
+   $("#_7").html(' ');
+}
+
+
+//// Here Is the Grand Total 
+///
+///
+
+
+
+grand_total = parseFloat($('#_5').text().replace(/,/g, '').replace('$ ', '')) + parseFloat($('#_6').text().replace(/,/g, '').replace('$ ', '')) +  parseFloat($('#_7').text().replace(/,/g, '').replace('$ ', '')) ;
+ grand_total = grand_total.toString();
+   
+   if(grand_total!="NaN"){
+               if (/\./i.test(grand_total)){
+      original = grand_total;
+      flt = grand_total.indexOf(".");
+      decimal  = grand_total.substr(0,flt);
+      x = grand_total.substr(flt,3); 
+    grand_total =  decimal+x;
+      
+}
+   grand_total = grand_total.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+  $("#_8").html('$ '+grand_total);
+
+}else{
+   $("#_8").html(' ');
+}
+
+
+/// Here is hte Calculate for Deposite 
+/// 
+
+$("#_9").html($("#i").val());
+
+
+
+
+/// here is the Balance Due
+/// 
+/// 
+
+blance_due = parseFloat($('#_8').text().replace(/,/g, '').replace('$ ', '')) - parseFloat($('#_9').text().replace(/,/g, '').replace('$ ', ''));
+ blance_due = blance_due.toString();
+   
+   if(blance_due!="NaN"){
+
+              if (/\./i.test(blance_due)){
+      original = blance_due;
+      flt = blance_due.indexOf(".");
+      decimal  = blance_due.substr(0,flt);
+      x = blance_due.substr(flt,3); 
+    blance_due =  decimal+x;
+   blance_due = blance_due.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+  $("#_10").html('$ '+blance_due);
+}
+}else{
+   $("#_10").html(' ');
+}
+
+
+  }
+
+
+
+
+</script>
+           
+        
+
+ 
+  </body>
+</html>

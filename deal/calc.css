@@ -1,0 +1,581 @@
+body {  background-color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+p{
+
+    font-weight:bold;
+}
+
+#title{
+
+margin:10px;
+}
+@media screen and (min-width: 300px) {
+  .maxinp {
+        display:block;
+        max-width: 110px;
+        /*min-width: 86px;*/
+        margin-left: 10px;
+        margin-top: 5px;
+        border:1px solid #cccccc;
+        border-radius: 5px 5px 5px 5px;
+        height:36px;
+        padding:5px;
+        /*background-color:#555555;*/
+    }
+    input:focus{
+        outline:none;
+        
+    }
+    .txtmrg1{
+        margin-left:20px;
+    }
+    .txtmrg2{
+        margin-left:50px;
+    }
+    .txtmrg3{
+        margin-left:14px;
+    }
+
+        #clearCurrent{
+margin-left: 0px;
+float:left;
+    }
+
+    #clearNew{
+margin-left: 0px;
+float:left;
+    }
+    #compare{
+margin-left: 0px;
+float: left;
+    }
+    #print{
+margin-left: 0px;
+float:left;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+  .maxinp {
+        max-width: 100px;
+        min-width: 86px;
+        margin-left: 40px;
+        margin-top: 5px;
+        border:1px solid #cccccc;
+        border-radius: 5px 5px 5px 5px;
+        height:36px;
+        padding:5px;
+        /*background-color:red;*/
+    }
+    input:focus{
+        outline:none;
+        
+    }
+    .txtmrg1{
+        margin-left:360px;
+    }
+    .txtmrg2{
+        margin-left:85px;
+    }
+    .txtmrg3{
+        margin-left:42px;
+    }
+            #clearCurrent{
+margin-left: 0px;
+float:left;
+    }
+
+    #clearNew{
+margin-left: 0px;
+float:left;
+    }
+    #compare{
+margin-left: 0px;
+float: left;
+    }
+    #print{
+margin-left: 0px;
+float:left;
+    }
+}
+@media screen and (min-width: 786px) {
+  .maxinp {
+        max-width: 100px;
+        min-width: 86px;
+        margin-left: 40px;
+        margin-top: 5px;
+        border:1px solid #cccccc;
+        border-radius: 5px 5px 5px 5px;
+        height:36px;
+        padding:5px;
+        /*background-color:red;*/
+    }
+    input:focus{
+        outline:none;
+        
+    }
+    .txtmrg1{
+        margin-left:405px;
+    }
+    .txtmrg2{
+        margin-left:85px;
+    }
+    .txtmrg3{
+        margin-left:42px;
+    }
+            #clearCurrent{
+margin-left: 0px;
+float:left;
+    }
+
+    #clearNew{
+margin-left: 0px;
+float:left;
+    }
+    #compare{
+margin-left: 0px;
+float: left;
+    }
+    #print{
+margin-left: 0px;
+float:left;
+    }
+}
+@media screen and (min-width: 896px) {
+  .maxinp {
+        max-width: 140px;
+        min-width: 86px;
+        margin-left: 40px;
+        margin-top: 5px;
+        border:1px solid #cccccc;
+        border-radius: 5px 5px 5px 5px;
+        height:36px;
+        padding:5px;
+        /*background-color:red;*/
+    }
+    input:focus{
+        outline:none;
+        
+    }
+    .txtmrg1{
+        margin-left:441px;
+    }
+    .txtmrg2{
+        margin-left:85px;
+    }
+    .txtmrg3{
+        margin-left:42px;
+    }
+            #clearCurrent{
+margin-left: 0px;
+float:left;
+    }
+
+    #clearNew{
+margin-left: 0px;
+float:left;
+    }
+    #compare{
+margin-left: 0px;
+float: left;
+    }
+    #print{
+margin-left: 0px;
+float:left;
+    }
+}
+@media screen and (min-width: 1024px) {
+  .maxinp {
+        max-width: 140px;
+        min-width: 86px;
+        margin-left: 40px;
+        margin-top: 5px;
+        border:1px solid #cccccc;
+        border-radius: 5px 5px 5px 5px;
+        height:36px;
+        padding:5px;
+        /*background-color:yellow;*/
+    }
+    input:focus{
+        outline:none;
+        
+    }
+    .txtmrg1{
+        margin-left:462px;
+    }
+    .txtmrg2{
+        margin-left:83px;
+    }
+    .txtmrg3{
+        margin-left:42px;
+    }
+    
+            #clearCurrent{
+margin-left: 0px;
+float:left;
+    }
+
+    #clearNew{
+margin-left: 0px;
+float:left;
+    }
+    #compare{
+margin-left: 0px;
+float: left;
+    }
+    #print{
+margin-left: 0px;
+float:left;
+    }
+}
+@media screen and (min-width: 1044px) {
+  .maxinp {
+        max-width: 150px;
+        min-width: 86px;
+        margin-left: 40px;
+        margin-top: 5px;
+        border:1px solid #cccccc;
+        border-radius: 5px 5px 5px 5px;
+        height:36px;
+        padding:5px;
+        /*background-color:yellow;*/
+    }
+    input:focus{
+        outline:none;
+        
+    }
+    .txtmrg1{
+        margin-left:500px;
+    }
+    .txtmrg2{
+        margin-left:83px;
+    }
+    .txtmrg3{
+        margin-left:35px;
+    }
+            #clearCurrent{
+margin-left: 0px;
+float:left;
+    }
+
+    #clearNew{
+margin-left: 0px;
+float:left;
+    }
+    #compare{
+margin-left: 0px;
+float: left;
+    }
+    #print{
+margin-left: 0px;
+float:left;
+    }
+    
+}
+@media screen and (min-width: 1144px) {
+  .maxinp {
+        max-width: 150px;
+        min-width: 86px;
+        margin-left: 40px;
+        margin-top: 5px;
+        border:1px solid #cccccc;
+        border-radius: 5px 5px 5px 5px;
+        height:36px;
+        padding:5px;
+        /*background-color:yellow;*/
+    }
+    input:focus{
+        outline:none;
+        
+    }
+    .txtmrg1{
+        margin-left:542px;
+    }
+    .txtmrg2{
+        margin-left:83px;
+    }
+    .txtmrg3{
+        margin-left:35px;
+    }
+            #clearCurrent{
+margin-left: 0px;
+float:left;
+    }
+
+    #clearNew{
+margin-left: 0px;
+float:left;
+    }
+    #compare{
+margin-left: 0px;
+float: left;
+    }
+    #print{
+margin-left: 0px;
+float:left;
+    }
+    
+}
+@media screen and (min-width: 1234px) {
+  .maxinp {
+        max-width: 150px;
+        min-width: 86px;
+        margin-left: 40px;
+        margin-top: 5px;
+        border:1px solid #cccccc;
+        border-radius: 5px 5px 5px 5px;
+        height:36px;
+        padding:5px;
+        /*background-color:yellow;*/
+    }
+    input:focus{
+        outline:none;
+        
+    }
+    .txtmrg1{
+        margin-left:572px;
+    }
+    .txtmrg2{
+        margin-left:83px;
+    }
+    .txtmrg3{
+        margin-left:35px;
+    }
+
+            #clearCurrent{
+margin-left: 0px;
+float:left;
+    }
+
+    #clearNew{
+margin-left: 0px;
+float:left;
+    }
+    #compare{
+margin-left: 0px;
+float: left;
+    }
+    #print{
+margin-left: 0px;
+float:left;
+    }
+    
+}
+@media screen and (min-width: 1366px) {
+  .maxinp {
+        max-width: 160px;
+        min-width: 86px;
+        margin-left: 16px;
+        margin-top: 5px;
+        border:1px solid #cccccc;
+        border-radius: 5px 5px 5px 5px;
+        height:36px;
+        padding:5px;
+        /*background-color:blue;*/
+    }
+    input:focus{
+        outline:none;
+        
+    }
+    .txtmrg1{
+        margin-left:642px;
+    }
+    .txtmrg2{
+        margin-left:134px;
+    }
+    .txtmrg3{
+        margin-left:88px;
+    }
+
+
+    #clearCurrent{
+margin-left: 30px;
+float:left;
+    }
+
+    #clearNew{
+margin-left: 60px;
+float:left;
+    }
+    #compare{
+margin-left: 0px;
+float: left;
+    }
+    #print{
+margin-left: 70px;
+float:left;
+    }
+}
+@media screen and (min-width: 1555px) {
+  .maxinp {
+        max-width: 160px;
+        min-width: 86px;
+        margin-left: 16px;
+        margin-top: 5px;
+        border:1px solid #cccccc;
+        border-radius: 5px 5px 5px 5px;
+        height:36px;
+        padding:5px;
+        /*background-color:blue;*/
+    }
+    input:focus{
+        outline:none;
+        
+    }
+    .txtmrg1{
+        margin-left:717px;
+    }
+    .txtmrg2{
+        margin-left:134px;
+    }
+    .txtmrg3{
+        margin-left:88px;
+    }
+            #clearCurrent{
+margin-left: 0px;
+float:left;
+    }
+
+    #clearNew{
+margin-left: 0px;
+float:left;
+    }
+    #compare{
+margin-left: 0px;
+float: left;
+    }
+    #print{
+margin-left: 0px;
+float:left;
+    }
+}
+
+@media screen and (min-width: 1710px){
+    .maxinp {
+        max-width: 175px;
+        min-width: 86px;
+        margin-left: 73px;
+        margin-top: 5px;
+        border:1px solid #cccccc;
+        border-radius: 5px 5px 5px 5px;
+        height:36px;
+        padding:5px;
+        /*background-color:gray;*/
+    }
+    input:focus{
+        outline:none;
+        
+    }
+    .txtmrg1{
+        margin-left:853px;
+    }
+    .txtmrg2{
+        margin-left:204px;
+    }
+    .txtmrg3{
+        margin-left:158px;
+    }
+            #clearCurrent{
+margin-left: 0px;
+float:left;
+    }
+
+    #clearNew{
+margin-left: 0px;
+float:left;
+    }
+    #compare{
+margin-left: 0px;
+float: left;
+    }
+    #print{
+margin-left: 0px;
+float:left;
+    }
+}
+@media screen and (min-width: 1920px){
+    .maxinp {
+        max-width: 175px;
+        min-width: 86px;
+        margin-left: 73px;
+        margin-top: 5px;
+        border:1px solid #cccccc;
+        border-radius: 5px 5px 5px 5px;
+        height:36px;
+        padding:5px;
+        /*background-color:gray;*/
+    }
+    input:focus{
+        outline:none;
+        
+    }
+    .txtmrg1{
+        margin-left:933px;
+    }
+    .txtmrg2{
+        margin-left:204px;
+    }
+    .txtmrg3{
+        margin-left:158px;
+    }
+}
+@media screen and (min-width: 2135px){
+    .maxinp {
+        max-width: 175px;
+        min-width: 86px;
+        margin-left: 73px;
+        margin-top: 5px;
+        border:1px solid #cccccc;
+        border-radius: 5px 5px 5px 5px;
+        height:36px;
+        padding:5px;
+        /*background-color:gray;*/
+    }
+    input:focus{
+        outline:none;
+        
+    }
+    .txtmrg1{
+        margin-left:129px;
+    }
+    .txtmrg2{
+        margin-left:204px;
+    }
+    .txtmrg3{
+        margin-left:158px;
+    }
+}
+
+
+.marg1{
+    margin-left:40px;
+
+}
+.marg2{
+    margin-left:77px;
+
+}
+.txtsize{
+    min-width:65px;
+    
+
+}
+
+.pad{
+
+    margin-left: 10px;
+}
+.checksize{
+    margin-left:5px;
+    margin-top:4px; 
+}
+
+
+.minWidth{
+    min-width:30px;
+}
+
+.btnst{
+    margin-right:10px;
+}
+
