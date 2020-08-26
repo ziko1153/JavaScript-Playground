@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mortgage Calculator</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+	<script type="text/javascript" src='js/jquery.min.js'></script>
+  <script  type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- for pie chart -->
+  <!-- <script src="https://static.anychart.com/js/8.0.1/anychart-core.min.js"></script> -->
+  <!-- <script src="https://static.anychart.com/js/8.0.1/anychart-pie.min.js"></script> -->
+  <!-- <script src="js/anychart-core.min.js"></script> -->
+  <script src="js/unminified2.js"></script>
+  <script src="js/anychart-pie.min.js"></script>
+
+</head>
+<body>
+	<div class="container-fluid" style="align-content: center;">
+    <div class="row">
+      <!-- START: Calculator -->
+      <div class="col-md-6 col-sm-11">
+        <div class="row">
+          <div class="col-md-9">
+            <h1 class="text-danger text-center">Mortgage Calculator</h1> <br>       
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            Home Price
+          </div>
+          <div class="col-md-6">
+            <div class="input-group mb-3">        
+              <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+              </div>
+              <input type="text" class="form-control" id="hp-loan-amount" value="800,000">          
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            Down Payment
+          </div>
+          <div class="col-md-6">
+            <div class="input-group mb-3">        
+              <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+              </div>
+              <input type="text" class="form-control" id="hp-down-payment-amount" value="50,000">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">
+            Loan Term
+          </div>
+          <div class="col-md-6">
+            <div class="input-group mb-3">        
+            <!-- <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div> -->
+            <input type="text" class="form-control" id="hp-loanTermInMonths" value="30">
+            <div class="input-group-append">
+              <span class="input-group-text">Year</span>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            Interest Rate
+          </div>
+          <div class="col-md-6">
+            <div class="input-group mb-3">        
+              <!-- <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+              </div> -->
+              <input type="text" class="form-control" id="hp-interest-rate" value="5">
+              <div class="input-group-append">
+                <span class="input-group-text">%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            State Tax Rate
+          </div>
+          <div class="col-md-6">
+            <div class="input-group mb-3">        
+              <!-- <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+              </div> -->
+              <input type="text" class="form-control" id="state-tax-rate" value="0.97">
+              <div class="input-group-append">
+                <span class="input-group-text">%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            Property tax
+          </div>
+          <div class="col-md-6">
+            <div class="input-group mb-3">        
+              <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+              </div>
+              <input type="text" class="form-control" id="hp-property-tax" value="5,000">
+              <div class="input-group-append">
+                <span class="input-group-text">/Year</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            Home Insurance
+          </div>
+          <div class="col-md-6">
+            <div class="input-group mb-3">        
+              <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+              </div>
+              <input type="text" class="form-control" id="hp-home-insurance" value="600">
+              <div class="input-group-append">
+                <span class="input-group-text">/Year</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <button class="btn btn-primary btn-lg btn-block" id="calculate">Calculate</button>        
+          </div>
+        </div>
+      </div>
+      <!-- END: CALCULATOR -->
+      <!-- START: PIE CHART -->
+      <div class="col-md-6 col-sm-11" id="myPieChart">
+        
+      </div>
+      <!-- END: PIE CHART -->
+    </div>
+  <br>
+</div>
+
+<!-- RESULT DIV -->
+<div class="container-fluid" style="display:none;" id="resDiv">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 text-danger text-center">
+      <h3>Detailed Information for the Monthly Payment</h3><hr>
+    </div>
+  </div>
+  <div class="row ">    
+    <div class="col-md-5 col-sm-11 ">
+      <div class="row">
+        <div class="col-md-6">
+          The amount of the loan will be
+        </div>
+        <div class="col-md-4">
+          <div class="input-group mb-3">        
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control" id="resLoanAmount" readonly>
+              <!-- <div class="input-group-append">
+                <span class="input-group-text">%</span>
+              </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          Monthly payment with PMI
+        </div>
+        <div class="col-md-4">
+          <div class="input-group mb-3">        
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control" id="resMonthlyPayment" readonly>
+            <!-- <div class="input-group-append">
+              <span class="input-group-text">%</span>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          Principal and Interest
+        </div>
+        <div class="col-md-4">
+          <div class="input-group mb-3">        
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control" id="resPrincipalAndInterest" readonly>
+            <div class="input-group-append">
+              <span class="input-group-text">/Month</span>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="col-md-6 col-sm-11">
+      <div class="row">
+        <div class="col-md-6">
+          Private Mortgage Insurance (PMI)
+        </div>
+        <div class="col-md-4">
+          <div class="input-group mb-3">        
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control" id="resPMI" readonly>
+            <div class="input-group-append">
+              <span class="input-group-text">/Month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          Property Tax
+        </div>
+        <div class="col-md-4">
+          <div class="input-group mb-3">        
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control" id="resPropertyTax" readonly>
+            <div class="input-group-append">
+              <span class="input-group-text">/Month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          Homeowners Insurance
+        </div>
+        <div class="col-md-4">
+          <div class="input-group mb-3">        
+            <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+            </div>
+            <input type="text" class="form-control" id="resInsurance" readonly>
+            <div class="input-group-append">
+              <span class="input-group-text">/Month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+     <!--  <div class="row">
+        <div class="col-md-12">      
+          <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th colspan="2" scope="col" class="text-center text-danger">Detailed Information for the Monthly Payment</th>
+
+              </tr>
+            </thead> 
+            <tbody>
+              <tr>
+                <td>Principal and Interest</td>
+                <td>
+                  <div class="input-group mb-3">        
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control" id="resPrincipalAndInterest" readonly>
+                    <div class="input-group-append">
+                      <span class="input-group-text">/Month</span>
+                    </div>
+                  </div>
+                </td>
+              </tr> 
+              <tr>
+                <td>Private Mortgage Insurance (PMI)</td>
+                <td>
+                  <div class="input-group mb-3">        
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control" id="resPMI" readonly>
+                    <div class="input-group-append">
+                      <span class="input-group-text">/Month</span>
+                    </div>
+                  </div>
+                </td>
+              </tr> 
+              <tr>
+                <td>Property Tax</td>
+                <td>
+                  <div class="input-group mb-3">        
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control" id="resPropertyTax" readonly>
+                    <div class="input-group-append">
+                      <span class="input-group-text">/Month</span>
+                    </div>
+                  </div>
+                </td>
+              </tr> 
+              <tr>
+                <td>Homeowners Insurance</td>
+                <td>
+                  <div class="input-group mb-3">        
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control" id="resInsurance" readonly>
+                    <div class="input-group-append">
+                      <span class="input-group-text">/Month</span>
+                    </div>
+                  </div>
+                </td>
+              </tr>     
+            </tbody>
+          </table>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  
+    <!-- showing results starts -->
+
+    <!-- showing results ends -->
+
+    <hr>
+    <div class="row">
+      <div class="col-10 text-center">
+        <button class="btn btn-outline-primary btn-lg" id="seeAmorization"> View Full Report &#8594;</button>
+      </div>
+    </div>
+<!--     <div class="row">
+      <div class="col-10" id="amortizationTable">
+      </div>
+    </div> -->
+  </div>
+  <br><br>
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+      var loanAmount;
+      var monthlyInterestRate;
+      var loanTerm;
+      var downPayment;
+      var stateTaxRate;
+      var principalAmount;
+      var principalAndInterest;
+      var monthlyPropertyTax;
+      var monthlyHomeInsurance;
+      var pmiPayment;
+      var monthlyPayment;
+    // var output = '<br>' ;
+
+
+
+    var getPMIPercent = function(downPaymentPercent){
+      if( downPaymentPercent < 0.05 ){
+        return 0.0130;
+      } else if ( downPaymentPercent < 0.10 ) {
+        return 0.0068;
+      } else if ( downPaymentPercent < 0.15 ) {
+        return 0.0051;
+      } else if ( downPaymentPercent < 0.20 ) {
+        return 0.0036;
+      } else {
+        return 0;
+      }
+    };
+
+    var monthlyPaymentFromPrincipal = function(monthlyInterestRate, loanTerm, principal) { 
+     return monthlyInterestRate * principal * Math.pow((1 + monthlyInterestRate), loanTerm) / (Math.pow((1 + monthlyInterestRate), loanTerm) - 1);
+   };
+
+
+    /*validating input starts*/
+    $('#hp-loan-amount').on('input',function(){
+      validateInput('#hp-loan-amount',$("#hp-loan-amount").val());
+    });
+
+    $('#hp-down-payment-amount').on('input',function(){      
+      validateInput('#hp-down-payment-amount',$("#hp-down-payment-amount").val());
+    });
+
+    $('#hp-loanTermInMonths').on('input',function(){      
+      validateInput('#hp-loanTermInMonths',$("#hp-loanTermInMonths").val());
+    });
+
+    $('#hp-property-tax').on('input',function(){      
+      validateInput('#hp-property-tax',$("#hp-property-tax").val());
+    });
+
+    $('#hp-home-insurance').on('input',function(){      
+      validateInput('#hp-home-insurance',$("#hp-home-insurance").val());
+    });
+    /*validating input ends*/
+
+   $('#calculate').on('click',function(){
+
+     $("#resDiv").css('display','block');
+     $("#myPieChart").html('');
+     loanAmount = parseFloat($("#hp-loan-amount").val().replace('$ ', '').replace(/,/g, '').replace(/-/g, '').replace(/[a-z]/g, ''));
+     monthlyInterestRate = parseFloat($("#hp-interest-rate").val().replace('$ ', '').replace(/,/g, '').replace(/-/g, '').replace(/[a-z]/g, '')) / 1200;
+     loanTerm = parseFloat($("#hp-loanTermInMonths").val().replace('$ ', '').replace(/,/g, '').replace(/-/g, '').replace(/[a-z]/g, '')) * 12;
+     downPayment = parseFloat($("#hp-down-payment-amount").val().replace('$ ', '').replace(/,/g, '').replace(/-/g, '').replace(/[a-z]/g, ''));
+     stateTaxRate = parseFloat($("#state-tax-rate").val().replace('$ ', '').replace(/,/g, '').replace(/-/g, '').replace(/[a-z]/g, ''));
+     principalAmount = loanAmount - downPayment;
+     principalAndInterest = monthlyPaymentFromPrincipal(monthlyInterestRate,loanTerm,principalAmount);
+     monthlyPropertyTax = loanAmount * stateTaxRate / 100 / 12 ;
+     monthlyHomeInsurance = parseFloat($("#hp-home-insurance").val().replace('$ ', '').replace(/,/g, '').replace(/-/g, '').replace(/[a-z]/g, '')) / 12;
+
+     pmiPayment = principalAmount * getPMIPercent(downPayment/loanAmount)/12;
+     monthlyPayment = pmiPayment + monthlyPropertyTax + monthlyHomeInsurance + principalAndInterest;
+
+	     	// console.log('principal : '+principalAmount);
+	     	// console.log('monthly Payment : '+monthlyPayment);
+	     	// console.log('monthly Rate : '+monthlyInterestRate);
+	     	// console.log('monthly principalAndInterest : '+principalAndInterest);
+	     	// console.log('monthly property tax : '+monthlyPropertyTax);
+	     	// console.log('monthly PMI : '+pmiPayment);
+	     	// console.log('state Tax : '+stateTaxRate);
+
+	     	$("#resLoanAmount").val(addCommas(Math.round(principalAmount)));
+	     	$("#resMonthlyPayment").val(addCommas(Math.round(monthlyPayment)));
+	     	$("#resPrincipalAndInterest").val(addCommas(Math.round(principalAndInterest)));
+	     	$("#resPMI").val(addCommas(Math.round(pmiPayment)));
+	     	$("#resInsurance").val(addCommas(Math.round(monthlyHomeInsurance)));
+	     	$("#resPropertyTax").val(addCommas(Math.round(monthlyPropertyTax)));
+        /*START: PIE CHART*/
+          anychart.onDocumentReady(function() {
+
+            // set the data
+            var data = [
+                {x: "Principal and Interest", value: principalAndInterest},
+                {x: "Private Mortgage Insurance", value: pmiPayment},
+                {x: "Property Tax", value: monthlyPropertyTax},
+                {x: "Homeowners Insurance", value: monthlyHomeInsurance}
+            ];
+
+            // create the chart
+            var chart = anychart.pie();
+
+            // set the chart title
+            chart.title("Payment Breakdown");
+
+            // add the data
+            chart.data(data);
+            
+            // sort elements
+            chart.sort("desc");  
+            
+            // set legend position
+            chart.legend().position("right");
+            // set items layout
+            chart.legend().itemsLayout("vertical");  
+
+            // display the chart in the container
+            chart.container('myPieChart');
+            chart.draw();
+          });
+          /*END: PIE CHART*/
+      });
+
+
+   /*on click the amorization table will be shown*/
+   $('#seeAmorization').on('click',function(){
+    var out = calculateAmortization();
+    // $('#amortizationTable').html(out);
+    w = window.open();
+    w.document.write(out);
+  });
+
+
+   /*START: AMORTIZATION FUNCTION */
+   function calculateAmortization(){
+      var output = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>Mortgage | Ammotization Table</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+        <script  type="text/javascript" src="js/bootstrap.min.js">\x3C/script> 
+      </head>
+      <body>
+      <div class="container mt-5 text-center">
+        <div class="text-center" style="background-color: #3d5a80; color: white;">
+          <h2>PAYMENT SCHEDULE</h2>
+        </div>
+        <table class="table table-striped ">
+          <thead>
+          <th>Year</th>
+          <th>Month</th>
+          <th>Principal and Interest</th>
+          <th>Principal</th>
+          <th>Interest</th>
+          <th>Principal Remaining</th>
+          <th>Total Interest</th>
+        </thead>
+        <tbody>
+      `;
+
+      let year = 1;
+      let monthlyInterst = (principalAmount * monthlyInterestRate);
+      let monthlyPrincipal = principalAndInterest - monthlyInterst;
+      let remainingPrincipal= principalAmount - monthlyPrincipal;
+      let totalInterest = monthlyInterst;
+
+      /*For monthly amortization table*/
+      for(let i = 1; i<=loanTerm; i++){
+        if(remainingPrincipal <= 0){
+          remainingPrincipal=0;
+        }
+        output = output + `
+        <tr>
+        <td>`+year+`</td>
+        <td>`+i+`</td>
+        <td>$ `+addCommas(Math.round(principalAndInterest))+`</td>
+        <td>$ `+addCommas(Math.round(monthlyPrincipal))+`</td>
+        <td>$ `+addCommas(Math.round(monthlyInterst))+`</td>
+        <td>$ `+addCommas(Math.round(remainingPrincipal))+`</td>
+        <td>$ `+addCommas(Math.round(totalInterest))+`</td>
+        </tr>
+        `;
+        if(i%12 == 0){
+          year++;
+        }
+        monthlyInterst = (remainingPrincipal * monthlyInterestRate);
+        monthlyPrincipal = principalAndInterest - monthlyInterst;
+        remainingPrincipal = remainingPrincipal - monthlyPrincipal;
+        totalInterest += monthlyInterst;
+      }
+      output = output + `</tbody></table></div></body></html>`;
+      return output;
+  }
+  /*END: AMORTIZATION FUNCTION */
+
+  /*START: PIE CHART*/
+          anychart.onDocumentReady(function() {
+
+            // set the data
+            var data = [
+                {x: "Principal and Interest", value: 1026},
+                {x: "Private Mortgage Insurance", value: 0},
+                {x: "Property Tax", value: 202},
+                {x: "Homeowners Insurance", value: 50}
+            ];
+
+            // create the chart
+            var chart = anychart.pie();
+
+            // set the chart title
+            chart.title("Payment Breakdown");
+
+            // add the data
+            chart.data(data);
+            
+            // sort elements
+            chart.sort("desc");  
+            
+            // set legend position
+            chart.legend().position("right");
+            // set items layout
+            chart.legend().itemsLayout("vertical");  
+
+
+            // display the chart in the container
+            chart.container('myPieChart');
+            chart.draw();
+          });
+          /*END: PIE CHART*/
+
+          /*START: VALIDATION FUNCTION*/
+          function validateInput(tagName,value){
+            value = $(tagName).val().replace('$ ', '').replace(/,/g, '').replace(/[a-z]/g, '');
+            $(tagName).val(`${addCommas(value)}`);
+            return;
+          }
+          // add commas for every 3 digits
+          function addCommas(number) {
+            if(!isNaN(number)){
+              let result = Number(Math.ceil(number)).toLocaleString();
+              return result;
+            }else{
+              return;
+            }
+
+          }
+          /*END: VALIDATION FUNCTION*/
+  
+});
+</script>
+</body>
+</html>
