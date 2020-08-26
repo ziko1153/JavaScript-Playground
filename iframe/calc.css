@@ -1,0 +1,40 @@
+body {  background-color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+p{
+
+	font-weight:bold;
+}
+
+/*input {
+
+	font-weight:bold;
+}*/
+.viewDetailsButton { color: blue; border-width: 0px; background-color: white; outline: none; display: block; margin-top: -35px; margin-left: 30%;margin-bottom:20px;}
+input.btn {
+  -webkit-user-select: initial;
+  -khtml-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+}
+
+.maxinp{
+	max-width:260px;
+	min-height:54px;
+	min-width:140px;
+	margin-left: -8px;
+
+}
+.checksize{
+	margin-left:5px;
+	margin-top:4px; 
+}
+
+#viewDetailsLi { min-height: 70px; font-weight: bold; height: max-content; width: max-content; }
+
+.detailSums{
+
+	min-width:50px;
+}
+.minWidth{
+	min-width:30px;
+}
