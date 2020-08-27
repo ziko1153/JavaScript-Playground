@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Project-1</title>
+	
+	<link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script  type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script  type="text/javascript" src="js/account.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+
+</head>
+<style type="text/css">
+	#memo{
+
+	width: 100%;
+	}
+	#cost{
+		width:84%;
+	}
+</style>
+<body>	
+	
+		<div class="container shadow-sm border p-3 mb-5 bg-white rounded" style="margin-top:10%" >
+		
+				<div class="row">
+					
+					<div class="table-responsive">
+						<table class="table table-borderless">
+							<thead class="">
+					
+									<th width="10%">Date</th>
+									<th width="70">Memo</th>
+									<th width="10%">Cost</th>
+									<th width="10%"></th>
+							</thead>
+							<tbody id="add_row" >
+								
+					
+							</tbody>
+
+								<tr>
+									<td></td>
+					<td><button id="add_expense" class="btn btn-danger btn-sm">Add Expense</button>
+
+						<div id="text_tag" style="float:right;text-align:right">Total Cost</br>
+						Asking Price/Special Price</br>Total Profit</div>
+					</td>
+					<td ><div id="price_tag" style="float:right">
+						<h6 align="" id="total_cost"><b></b></h6>
+						<h6 id="ask_price" data-price = "79900"><b></b></h6>
+						<h6 id="total_profit"><b></b></h6>
+					</div>
+					</td>
+				
+									
+								</tr>						
+							
+						</table>
+					</div>
+				</div>
+				</div>
+			
+
+		</div>
+
+
+
+</body>
+</html>
+<script type="text/javascript">var i=1;$(document).ready(function(){function calculate(){var cost=[];var rowCount=$('#add_row  tr').length;if(rowCount==0){$("#price_tag").hide()}else{$("#price_tag").show();for(var i=1;i<=rowCount;i++){cost.push($('#add_row  tr:nth-child('+i+') td:eq(2)').find('input').val())}
+sum=0;$.each(cost,function(){sum+=parseFloat(this)||0});$("#total_cost").html("<b>"+accounting.formatMoney(sum)+"<b>");var ask_price=$("#ask_price").data("price");$("#ask_price").html("<b>"+accounting.formatMoney(ask_price)+"</b>");var total_profit=ask_price-sum;if(sum>0)
+$("#total_profit").html("<b>"+accounting.formatMoney(total_profit)+"</b>");else $("#total_profit").html("<b>"+accounting.formatMoney(0)+"</b>")}}
+$.getJSON("db.json",function foo(result){console.log(jQuery.isEmptyObject(result[0]));var rowdata=[];for(var key in result[0]){rowdata.push(result[0][key])}
+var l=0;for(i=1;i<=rowdata[rowdata.length-1];i++){$('#add_row').append('<tr id="row'+i+'"><td width="15%"><input class="form-control date_input" value="'+rowdata[l]+'"  name="date_'+i+'"></td><td  width="65%" ><input class="form-control" id="memo" value="'+rowdata[++l]+'"   name="memo_'+i+'"></td><td width="15%"><div style="float:left;">$&nbsp</div><div style=""><input  dir = "rtl"class="form-control calculateCost" id="cost" value="'+rowdata[++l]+'"   name="cost_'+i+'"></div></td><td class="col-1"><button type="button" name="remove" id="'+i+'" class="btn btn_remove"><i class="fa fa-trash" aria-hidden="true"></i></button></td></tr>');$(".date_input").datepicker({dateFormat:'dd-mm-yy'});calculate()
+++l}});$('#add_expense').click(function(e){$('#add_row').append('<tr id="row'+i+'"><td width="15%"><input class="form-control date_input"  name="date_'+i+'"></td><td  width="65%" ><input class="form-control" id="memo"  name="memo_'+i+'"></td><td width="15%"><div style="float:left;">$&nbsp</div><div style=""><input  dir = "rtl"class="form-control calculateCost" id="cost"   name="cost_'+i+'"></div></td><td class="col-1"><button type="button" name="remove" id="'+i+'" class="btn btn_remove"><i class="fa fa-trash" aria-hidden="true"></i></button></td></tr>');$(".date_input").datepicker({dateFormat:'dd-mm-yy'});i++;calculate()});$(document).on('click','.btn_remove',function(){var button_id=$(this).attr("id");$('#row'+button_id+'').remove();calculate()});$(document).on('input','.calculateCost',function(){let value=$(this).val();value=value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g,'$1');$(this).val(value);calculate()})});</script>
